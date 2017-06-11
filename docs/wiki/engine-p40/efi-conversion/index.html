@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>EFI Conversion | MQ-Patrol.com</title>
+
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+    
+    <link rel="stylesheet" href="/css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="/css/theme.css" type="text/css" />
+
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.js"></script>
+    <script type="text/javascript" src="/js/generated_toc.js"></script>
+
+</head>
+
+<body class=" view-default ">
+
+    <nav class="navbar navbar-static-top navbar-inverse" role="navigation" id="navbar-view">
+        <div class="container">
+            
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-view-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/" title="EFI Conversion">
+                <span class="label label-primary logo">MQ<span class="label label-danger">Patrol</span></span>
+                </a>
+            </div>
+            
+            <div class="collapse navbar-collapse"
+                id="navbar-view-collapse">
+                <ul class="nav navbar-nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                    
+                        <li class="nav-item">
+                            <a class="nav-link" href="/wiki/">Wiki</a>
+                        </li>
+                    
+                        <li class="nav-item">
+                            <a class="nav-link" href="/service-manuals/">Service Manuals</a>
+                        </li>
+                    
+                </ul>
+                <div class="navbar-form navbar-right">
+                    
+                    <script>
+                        (function() {
+                        var cx = 'partner-pub-8565564742755576:qu9oimxm6xx';
+                        var gcse = document.createElement('script');
+                        gcse.type = 'text/javascript';
+                        gcse.async = true;
+                        gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                        var s = document.getElementsByTagName('script')[0];
+                        s.parentNode.insertBefore(gcse, s);
+                        })();
+                    </script>
+                    <gcse:searchbox-only></gcse:searchbox-only>
+                    <style>
+                        .gsc-control-cse .gsc-table-result {
+                            font-family : inherit;
+                        }
+
+                        .gsc-control-cse .gsc-input-box {
+                            height : inherit;
+                        }
+
+                        input.gsc-input,
+                        .gsc-input-box,
+                        .gsc-input-box-hover,
+                        .gsc-input-box-focus,
+                        .gsc-search-button, input.gsc-search-button-v2 {
+                            box-sizing  : content-box;
+                            line-height : normal;
+                            margin-top  : 0px;
+                        }
+                    </style>
+                    
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        
+            <ol class="breadcrumb">
+                <span>You are here:</span>
+                <li><a href="http://mq-patrol.com/">Home</a></li>
+
+                
+                  
+                    
+                      
+                  
+                    
+                      
+                      
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                      <li><a href='http://mq-patrol.com/wiki'>Wiki</a></li>
+                      
+                      
+                  
+                    
+                      
+                      
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                      <li><a href='http://mq-patrol.com/wiki/engine-p40'>Engine P40</a></li>
+                      
+                      
+                  
+                    
+                      
+                      
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                      <li><a href='http://mq-patrol.com/wiki/engine-p40/efi-conversion'>EFI Conversion</a></li>
+                      
+                      
+                  
+                    
+                      
+                  
+                </ol>
+                
+            </ol>
+        
+
+        <div style="margin:1em 0 2em;">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-8565564742755576"
+                 data-ad-slot="4327851087"
+                 data-ad-format="auto"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+        
+        <div class="row">
+
+
+<div class="col-md-12">
+    <div class="inner-content">
+        <article class="document-view content">
+            <h1>EFI Conversion</h1>
+            
+            <ul class="list-inline" style="padding:1em 0;">
+                Tagged with:
+                
+                <li><a class="label label-default" href="../../engine-p40">Engine - P40</a></li>
+                
+            </ul>
+            
+            <div>
+                <div class="col-xs-12 col-sm-5 col-md-4 pull-right">
+                    <div id="panel-wrap-toc" class="panel panel-primary toc">
+                        <div id="panel-heading-toc" class="panel-heading accordion-toggle" data-toggle="collapse" data-target="#panel-toc" aria-expanded="true">
+                            <h2 class="panel-title">Table of Contents</h2>
+                        </div>
+                        <div id="panel-toc" class="panel-collapse collapse in panel-body" role="tabpanel" aria-labelledby="#panel-heading-toc">
+                            <div id="generated-toc"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="content" class="body">
+                    
+
+<p>This information is further to the <a href="/wiki/engine-p40/megasquirt-how-to">Megasquirt How-To</a> and <a href="/wiki/engine-p40/edis-electronic-ignition-how-to">Edis Electronic Ignition How-To</a> wiki pages.</p>
+
+<h2 id="posts-taken-from-rmp-o-com-forum">Posts taken from rmp-o.com forum</h2>
+
+<h3 id="post-by-chimpboy-on-mon-may-28-2007-at-11-55-am">Post by <strong>chimpboy</strong> on Mon May 28, 2007 at 11:55 am</h3>
+
+<blockquote>
+<p>I would say that if you get an EA falcon, which will cost almost nothing complete, it will come surprisingly close to just bolting on. You want the single-point injection model, which I think has a &ldquo;3.9&rdquo; badge.</p>
+
+<p>You&rsquo;ll just pull off the carby and put the ford throttle body injection on in the same place. You might be able to file some bolt holes oval, or you might have to make a small adaptor plate.</p>
+
+<p>The fiddliest bit will be running a a second fuel line. Since you have (I think) a spare 60, you will probably be able to put your spare fuel line in next to the original one and it will look pretty close to factory. I can&rsquo;t remember if there&rsquo;s a suitable hole or fitting in the tank to connect the return line to but at worst you could tap into the plate that the fuel level sender is attached to (rather than drilling into the tank itself).</p>
+
+<p>I definitely wouldn&rsquo;t bother with multipoint injection from an EF or whatever, it&rsquo;s far too complicated and just tapping the injectors into the inlet manifold is probably very far from optimal anyway.</p>
+
+<p>Throttle body injection is really just like an electronic carby. Very simple and reliable and more than adequate for this engine. I think you&rsquo;ll find it performs better and is more economical, and if you do take it off-road it will work much better on slopes than the carby does.</p>
+
+<p>In answer to someone&rsquo;s previous question, the distributor doesn&rsquo;t need to be connected at all, except maybe a signal wire to detect engine speed (can hook to the coil same as you&rsquo;d connect a tacho).</p>
+
+<p>As you know I&rsquo;ve just converted the Stag to EFI and it was very, very worth it. Funny thing was I got all the EFI gear for $200, then sold the old holley four-barrel for $220. I don&rsquo;t think you&rsquo;ll get $220 for your G60 carby though</p>
+
+<p>You could even find an EA on gas and go dual fuel at the same time</p>
+</blockquote>
+
+<h3 id="post-by-david-s-on-mon-may-28-2007-at-10-35-pm">Post by <strong>David_S</strong> on Mon May 28, 2007 at 10:35 pm</h3>
+
+<blockquote>
+<p>Here&rsquo;s my basic system as I sent to Swerve</p>
+
+<p>TBI of Falcon EA (4L straight 6)
+Megasquirt ecu and relay box (Google megasquirt)
+LC-1 wideband oxygen controller (wideband O2 is essential for tuning)
+Existing mechanical pump feeding a surge tank which in turn feeds a high pressure external pump to pressurise the injectors (2)
+CLT sensor (coolant temp)
+MAT sensor (manifold air temp)
+TPS throttle position sensor (Part of Falcon tbi)
+Fuel pressure regulator (Part of Falcon tbi)
+Air filter box modified from one off a GQ diesel
+RPM signal from coil</p>
+
+<p>At present the megasquirt is set up to control fuel only but once I have it fully sussed I will control spark too with the Megasquirt using input from my distributor (pertronix ignitor) with the vacuum and centrifugal advance locked down.</p>
+
+<p>And yes the first test runs are impressive. Rocketed up a steep fire break on Sunday on all-terrain tyres where previously I ran out of oomph with the carb and struggled. A petrol FJ40 on mudgrips couldn&rsquo;t manage it - he died just where I used to struggle. And the P40 idles happily on a 45 deg slope. No more plug fouling when the carb floods.</p>
+
+<p>Megasquirt is totally open source so you tune it to your engine with a laptop as you go down the road!</p>
+
+<p>Some additional comments relating to previous posts.</p>
+
+<p>1) My surge tank arrangement with external Bosch fuel pump appears to work well. I was not keen to monkey around with an in-tank pump and high pressure lines running the length of my truck. (If you look at the underneath of my truck you will see why!!) With my system I connect the existing LP line <sup>3</sup>&frasl;<sub>4</sub> the way up a cylindrical 2 litre tank with an outlet at the top which connects to the existing return line to the main tank. The HP pump is located under the surge tank and is fed from the bottom of the surge tank. The return line from the TBI feeds into the top of the surge tank.</p>
+
+<p>2) The Falcon EA tbi is not a simple bolt on to the existing inlet manifold plate as I believe is possible with the GQ engine (not the P40). I bought a Falcon manifold along with the tbi unit. I cut off the plates from both manifolds and welded the Falcon plate to the Nissan manifold. Needed a fair bit of filing to get a smooth transition. Subsequently I made a 1&rdquo; spacer to raise the tbi unit. This apparently moves the torque curve to the lower rpm end (good) but I did it mainly to make the air filter and throttle cable fit easier. I also fabricated an adapter so I could bolt my carb back on if I had an ecu failure in the back of beyond.</p>
+
+<p>3) I wouldn&rsquo;t bother with rail injection and not sure anyway if it would work with 4 runners instead of 6. The tbi unit comes with the fuel pressure regulator built in plus the throttle position sensor (TPS) and a fast idle dc motor which I have hooked up as a hand throttle. Also, and importantly the tbi fuel pressure is only 15 psi compared to the 45+ for rail injection.</p>
+
+<p>4) I wouldn&rsquo;t transplant the ecu from a Falcon or other donor. It is old technology and you can&rsquo;t tune it readily for your own engine. I have the technician notes for the Falcon units and it don&rsquo;t look simple to tune. Requires special equipment. Half the fun of my efi installation is being able to tune it on the road. Additionally the Falcon unit requires a signal from the Ford TFI distributor so you have to get one of these and graft it on to the shaft of your Nissan dizzy.</p>
+
+<p>5) The Megasquirt ecu is, in my opinion, by far the best unit for diy. 6 months ago I knew nothing at all about efi now I have a working system. There is a very active Megasquirt forum where most of your software and hardware queries can be answered. You can buy fully assembled units or a kit for $US200. I got a kit and my son assembled it for me without difficulty. The Megasquirt can control both fuel and spark. The software is free and open source so you can modify it as much as you like if you want to.</p>
+
+<p>6) The two most difficult things I contended with were the air filter and the wiring.
+a) The Falcon air filter was too large and standard Nissan boxes have round holes whereas the Falcon Tbi is oval. In the end I cut the bottom out of a GQ filter box and replaced it with an oval hole.</p>
+
+<p>b) The wiring is not really difficult, but you have to be methodical, plan routes carefully and keep up to date drawings as you go. I used the Megasquirt relay board mounted in a weatherproof box on the firewall. All wires from sensors, injectors, ignition, 12V source terminate here. The relay board is then connected to the ecu which I have mounted in the glovebox. (I have had water round my feet and coming out the heater vents in river crossings but not yet in the glovebox!) There are around 20 wires connecting the relay board to the ecu which pass through the firewall. Also a vacuum tube (MAP) to connect to the inlet manifold. The Megasquirt incorporates a MAP sensor.</p>
+
+<p>7) A wideband oxgen sensor and controller is expensive but an absolute MUST for tuning. I use the LC-1 controller ($US200) which so far has worked well. They too have an excellent forum to help with installation and other problems. The wideband controller gives the actual AFR (air fuel ratio) whereas a narrow band just tells you whether the mixture is rich or lean relative to stoichometric (AFR of 14.7). With the wideband you can set up an AFR table in Megatune for every combination of rpm and MAP.</p>
+
+<p>As for performance there has been a marked improvement. The engine revs very freely (would probably go to 6000rpm if I let it). There has been a definite power increase. The torque curve appears to have flattened so that it pulls hard between about 1200 and 3000 rpm. And best of all it does not flood on steep hills.</p>
+</blockquote>
+
+<h4 id="pictures-from-post">Pictures from post</h4>
+
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center"><a href="/wiki/engine-p40/efi-conversion/bitspieces.jpg"><img src="/wiki/engine-p40/efi-conversion/bitspieces.jpg" alt="" /></a></td>
+<td align="center"><a href="/wiki/engine-p40/efi-conversion/extractors.jpg"><img src="/wiki/engine-p40/efi-conversion/extractors.jpg" alt="" /></a></td>
+<td align="center"><a href="/wiki/engine-p40/efi-conversion/relaybox.jpg"><img src="/wiki/engine-p40/efi-conversion/relaybox.jpg" alt="" /></a></td>
+</tr>
+
+<tr>
+<td align="center"><a href="/wiki/engine-p40/efi-conversion/fuelschematic.jpg"><img src="/wiki/engine-p40/efi-conversion/fuelschematic.jpg" alt="" /></a></td>
+<td align="center"><a href="/wiki/engine-p40/efi-conversion/mqcc_0009.jpg"><img src="/wiki/engine-p40/efi-conversion/mqcc_0009.jpg" alt="" /></a></td>
+<td align="center"><a href="/wiki/engine-p40/efi-conversion/finishedsetupwithoutairbox.jpg"><img src="/wiki/engine-p40/efi-conversion/finishedsetupwithoutairbox.jpg" alt="" /></a></td>
+</tr>
+
+<tr>
+<td align="center"><a href="/wiki/engine-p40/efi-conversion/Powerrelayboard.jpg"><img src="/wiki/engine-p40/efi-conversion/Powerrelayboard.jpg" alt="" /></a></td>
+<td align="center"><a href="/wiki/engine-p40/efi-conversion/DSCF3062Medium.jpg"><img src="/wiki/engine-p40/efi-conversion/DSCF3062Medium.jpg" alt="" /></a></td>
+<td align="center"><a href="/wiki/engine-p40/efi-conversion/DSCF3063Medium.jpg"><img src="/wiki/engine-p40/efi-conversion/DSCF3063Medium.jpg" alt="" /></a></td>
+</tr>
+
+<tr>
+<td align="center"><a href="/wiki/engine-p40/efi-conversion/DSCF3064Medium.jpg"><img src="/wiki/engine-p40/efi-conversion/DSCF3064Medium.jpg" alt="" /></a></td>
+<td align="center"><a href="/wiki/engine-p40/efi-conversion/DSCF3066Medium.jpg"><img src="/wiki/engine-p40/efi-conversion/DSCF3066Medium.jpg" alt="" /></a></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+
+                </div>
+            </div>
+            
+        </article>
+    </div>
+</div>
+
+
+
+        </div>
+        
+        <div style="margin:2em 0 1em;">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-8565564742755576"
+                 data-ad-slot="7281317486"
+                 data-ad-format="auto"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+        
+    </div>
+
+    <footer>
+        <div class="container">
+            <p><strong>Got suggestions or have found something wrong with one of the wiki pages? Contant <a href="http://www.patrol4x4.com/forum/members/nerok-3286/" target="_blank">neRok</a> on Patrol4x4 forum.</strong></p>
+            <div class="col-sm-5 text-right text-muted">Works on this site are licensed under a</div>
+            <ul class="list-inline col-sm-7 text-left">
+                <li><a target="_blank" class="label label-primary" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">CC Attribution-Noncommercial-Share Alike 3.0 Unported</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-19483317-2', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+    </body>
+</html>
+

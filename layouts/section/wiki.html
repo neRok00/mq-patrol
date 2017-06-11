@@ -1,0 +1,27 @@
+{{ partial "header.html" . }}
+
+<div class="inner-content">
+    <article class="content custom-content-default-view">
+        
+        <h1>{{ .Title }}</h1>
+
+        <div class="row">
+            
+            {{ range where .Site.Pages.ByTitle "Type" "WikiCategory" }}
+                <div class="col-xs-6 col-sm-4 col-md-3">
+                    <a href="{{ .RelPermalink }}" class="thumbnail text-center wiki">
+                        <h2 class="h4">{{ .Title }}</h2>
+                        <div>
+                            {{ .Content }}
+                        </div>
+                        <button class="btn btn-primary" role="button">View all '{{ .Title  }}' articles</button>
+                    </a>
+                </div>
+            {{ end }}
+        
+        </div>
+
+    </article>
+</div>
+
+{{ partial "footer.html" . }}

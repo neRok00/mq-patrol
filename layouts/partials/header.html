@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>{{ if ne .Title .Site.Title }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
+
+    <link rel="shortcut icon" type="image/png" href="{{ "favicon.png" | relURL }}"/>
+    
+    <link rel="stylesheet" href="{{ "css/bootstrap.css" | relURL }}" type="text/css" />
+    <link rel="stylesheet" href="{{ "css/theme.css" | relURL }}" type="text/css" />
+
+    <script type="text/javascript" src="{{ "js/jquery.js" | relURL }}"></script>
+    <script type="text/javascript" src="{{ "js/bootstrap.js" | relURL }}"></script>
+    <script type="text/javascript" src="{{ "js/generated_toc.js" | relURL }}"></script>
+
+</head>
+
+<body class=" view-default ">
+
+    <nav class="navbar navbar-static-top navbar-inverse" role="navigation" id="navbar-view">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-view-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/" title="{{ .Title }}">
+                <span class="label label-primary logo">MQ<span class="label label-danger">Patrol</span></span>
+                </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse"
+                id="navbar-view-collapse">
+                <ul class="nav navbar-nav">
+                    {{ $currentNode := . }}
+                    {{ range .Site.Menus.main }}
+                        <li class="nav-item{{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }} active{{end}}">
+                            <a class="nav-link" href="{{.URL}}">{{ .Name }}</a>
+                        </li>
+                    {{ end }}
+                </ul>
+                <div class="navbar-form navbar-right">
+                    
+                    <script>
+                        (function() {
+                        var cx = 'partner-pub-8565564742755576:qu9oimxm6xx';
+                        var gcse = document.createElement('script');
+                        gcse.type = 'text/javascript';
+                        gcse.async = true;
+                        gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                        var s = document.getElementsByTagName('script')[0];
+                        s.parentNode.insertBefore(gcse, s);
+                        })();
+                    </script>
+                    <gcse:searchbox-only></gcse:searchbox-only>
+                    <style>
+                        .gsc-control-cse .gsc-table-result {
+                            font-family : inherit;
+                        }
+
+                        .gsc-control-cse .gsc-input-box {
+                            height : inherit;
+                        }
+
+                        input.gsc-input,
+                        .gsc-input-box,
+                        .gsc-input-box-hover,
+                        .gsc-input-box-focus,
+                        .gsc-search-button, input.gsc-search-button-v2 {
+                            box-sizing  : content-box;
+                            line-height : normal;
+                            margin-top  : 0px;
+                        }
+                    </style>
+                    
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        {{ if .IsPage }}
+            <ol class="breadcrumb">
+                <span>You are here:</span>
+                <li><a href="{{ absURL "/" }}">Home</a></li>
+
+                {{ $.Scratch.Add "path" .Site.BaseURL }}
+                  {{ range $index, $element := split .RelPermalink "/" }}
+                    {{ $.Scratch.Add "path" $element }}
+                      {{ if ne $element "" }}
+                      {{ $title := title (replace . "-" " ") }}
+                          {{ $title := replace $title "Sd33" "SD33" }}
+                          {{ $title := replace $title "33t" "33T" }}
+                          {{ $title := replace $title "Mq" "MQ" }}
+                          {{ $title := replace $title "Mk" "MK" }}
+                          {{ $title := replace $title "Gq" "GQ" }}
+                          {{ $title := replace $title "Gu" "GU" }}
+                          {{ $title := replace $title "Efi" "EFI" }}
+                      <li><a href='{{ $.Scratch.Get "path" }}'>{{ $title }}</a></li>
+                      {{ $.Scratch.Add "path" "/" }}
+                      {{ end }}
+                  {{ end }}
+                </ol>
+                
+            </ol>
+        {{ end }}
+
+        <div style="margin:1em 0 2em;">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- Responsive - Text+Display -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-8565564742755576"
+                 data-ad-slot="4327851087"
+                 data-ad-format="auto"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+        
+        <div class="row">

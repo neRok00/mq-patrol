@@ -1,0 +1,26 @@
+baseurl = "http://mq-patrol.com/"
+languageCode = "en-AU"
+title = "MQ-Patrol.com"
+
+pluralizelisttitles = "false"
+preserveTaxonomyNames = "true"
+disableKinds = ["RSS", "taxonomy"]
+
+publishDir = "docs"
+
+[params]
+
+[[menu.main]]
+    name = "Home"
+    weight = 1
+    url = "/"
+    
+[[menu.main]]
+    name = "Wiki"
+    weight = 2
+    url = "/wiki/"
+    
+[[menu.main]]
+    name = "Service Manuals"
+    weight = 3
+    url = "/service-manuals/"

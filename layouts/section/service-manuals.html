@@ -1,0 +1,27 @@
+{{ partial "header.html" . }}
+
+<div class="inner-content">
+    <article class="content custom-content-default-view">
+        
+        <h1>{{ .Title }}</h1>
+
+        <div class="row">
+            
+            {{ range where .Site.Pages.ByTitle "Type" "ServiceManual" }}
+                <div class="col-sm-4 col-md-3">
+                    <a href="{{ .RelPermalink }}" class="thumbnail text-center service_manual">
+                        <div>
+                            <img src="{{ .RelPermalink }}/cover-small.jpg" alt="{{ .Title }}">
+                        </div>
+                        <h2 class="h4">{{ .Title }}</h2>
+                        <button class="btn btn-primary" role="button">View</button>
+                    </a>
+                </div>
+            {{ end }}
+        
+        </div>
+
+    </article>
+</div>
+
+{{ partial "footer.html" . }}

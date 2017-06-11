@@ -1,0 +1,35 @@
+{{ partial "header.html" . }}
+
+<div class="col-md-12">
+    <div class="inner-content">
+        <article class="document-view content">
+            <h1>{{ .Title }}</h1>
+            
+            <ul class="list-inline" style="padding:1em 0;">
+                Tagged with:
+                {{ range .Params.tags }}
+                <li><a class="label label-default" href="../../{{ replace (urlize .) "---" "-" }}">{{ . }}</a></li>
+                {{ end }}
+            </ul>
+            
+            <div>
+                <div class="col-xs-12 col-sm-5 col-md-4 pull-right">
+                    <div id="panel-wrap-toc" class="panel panel-primary toc">
+                        <div id="panel-heading-toc" class="panel-heading accordion-toggle" data-toggle="collapse" data-target="#panel-toc" aria-expanded="true">
+                            <h2 class="panel-title">Table of Contents</h2>
+                        </div>
+                        <div id="panel-toc" class="panel-collapse collapse in panel-body" role="tabpanel" aria-labelledby="#panel-heading-toc">
+                            <div id="generated-toc"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="content" class="body">
+                    {{ .Content }}
+                </div>
+            </div>
+            
+        </article>
+    </div>
+</div>
+
+{{ partial "footer.html" . }}

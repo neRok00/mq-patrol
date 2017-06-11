@@ -1,0 +1,73 @@
+{{ partial "header.html" . }}
+
+<div class="col-md-12">
+    <div class="inner-content">
+        <article class="document-view content">
+            <h1>{{ .Title }}</h1>
+            <div class="row">
+                <div class="col-sm-7">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th class="text-center">Tags</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{ $compare := .Title }}
+                            {{ range $term, $terms := .Site.Taxonomies.tags }}
+                            {{ if eq $term $compare }}
+                                {{ range $terms.Pages }}
+                                <tr>
+                                    <td><a href="{{ .Permalink}}" style="display: block">{{ .LinkTitle }}</a></td>
+                                    <td class="text-center">
+                                        <ul class="list-inline">
+                                            {{ range $type, $val := .Params.tags }}
+                                                {{ if gt (len $val) 2 }}
+                                                    <li>
+                                                        <a class="label label-default" href="../{{ replace (urlize .) "---" "-" }}">{{ . }}</a>
+                                                    </li>
+                                                {{ else }}
+                                                    <span class="text-muted glyphicon glyphicon-minus" aria-hidden="true"></span>
+                                                {{ end }}
+                                            {{ end }}
+                                        </ul>
+                                    </td>
+                                </tr>
+                                {{ end }}
+                            {{ end }}
+                            {{ end }}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-sm-5">
+                    <div class="panel panel-primary">
+                        <div id="panel-heading-info" class="panel-heading accordion-toggle" data-toggle="collapse" data-target="#panel-info" aria-expanded="true">
+                            <h2 class="panel-title">Topics Covered in this Section</h2>
+                        </div>
+                        <div id="panel-info" class="panel-collapse collapse in panel-body" role="tabpanel" aria-labelledby="#panel-heading-info">
+                            <div>
+                                {{ .Content }}
+                            </div>
+                        </div>
+                    </div>
+<!--
+                    <div class="panel panel-primary">
+                        <div id="panel-heading-manuals" class="panel-heading accordion-toggle" data-toggle="collapse" data-target="#panel-manuals" aria-expanded="true">
+                            <h2 class="panel-title">Related <a href="http://127.0.0.1:5000/service-manuals/">Service Manuals</a> and Chapters</h2>
+                        </div>
+                        <div id="panel-manuals" class="panel-collapse collapse in list-group" role="tabpanel" aria-labelledby="#panel-heading-manuals">
+                            <a href="http://127.0.0.1:5000/service-manuals/mq-service-manual-1980/chapter-08-fuel-exhaust/" class="list-group-item truncate">
+                                <span class="glyphicon glyphicon-file" aria-hidden="true"></span>
+                                Chapter 08 - Fuel &amp; Exhaust
+                            </a>
+                        </div>
+                    </div>
+-->
+                </div>
+            </div>
+        </article>
+    </div>
+</div>
+
+{{ partial "footer.html" . }}

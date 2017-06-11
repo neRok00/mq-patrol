@@ -1,0 +1,83 @@
+{{ partial "header.html" . }}
+
+<div class="col-md-12">
+    <div class="inner-content">
+        <article class="document-view content">
+            <h1>{{ .Title }}</h1>
+            <div class="row">
+                <div class="col-sm-7">
+                    
+                    <div class="row">
+                        {{ range seq .Params.cover_pages }}
+                            {{ if lt . 10 }}
+                                {{ $.Scratch.Set "prefix" "0" }}
+                            {{ else }}
+                                {{ $.Scratch.Set "prefix" "" }}
+                            {{ end }}
+                            <div class="col-xs-6">
+                                <a href="cover-{{ $.Scratch.Get "prefix" }}{{ . }}.jpg" target="_blank" class="thumbnail text-center">
+                                    <img src="cover-{{ $.Scratch.Get "prefix" }}{{ . }}.jpg" alt="cover-{{ $.Scratch.Get "prefix" }}{{ . }}.jpg" class="img-responsive img-thumbnail">
+                                </a>
+                            </div>
+                        {{ end }}
+                    </div>
+
+                </div>
+                
+                <div class="col-sm-5">
+                    
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h2 class="panel-title">Info</h2>
+                        </div>
+                        <div class="panel-body">
+                            {{ .Content }}
+                        </div>
+                    </div>
+
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h2 class="panel-title">Download</h2>
+                        </div>
+                        <div class="list-group">
+                            <a href="{{ index .Params.file 0 }}" class="list-group-item">
+                                <span class="badge">{{ index .Params.file 1 }}</span>
+                                {{ index .Params.file 0 }}
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="panel panel-primary">
+                        <div id="chapters-heading" class="panel-heading accordion-toggle" data-toggle="collapse" data-target="#chapters" aria-expanded="true">
+                            <h2 class="panel-title">Chapters</h2>
+                        </div>
+                        <div id="chapters" class="panel-collapse collapse in list-group" role="tabpanel" aria-labelledby="chapters-heading">
+                            {{ $compare := .RelPermalink }} 
+                            {{ range $section, $content := .Site.Sections }}
+                                {{ if eq $section "service-manuals" }}
+                                    {{ $all_chapters := where $content.Pages "Type" "ServiceManualChapter" }}
+                                    {{ range (sort $all_chapters "Params.number") }}
+                                        {{ if hasPrefix .RelPermalink $compare }}
+                                            {{ if lt .Params.number 10 }}
+                                                {{ $.Scratch.Set "prefix" "0" }}
+                                            {{ else }}
+                                                {{ $.Scratch.Set "prefix" "" }}
+                                            {{ end }}
+                                            <a href="{{ .RelPermalink}}" class="list-group-item">
+                                                <span class="badge">{{ .Params.pages }} Pages</span>
+                                                Chapter {{ $.Scratch.Get "prefix" }}{{ .Params.number }} - {{ .Title }}
+                                            </a>
+                                        {{ end }}
+                                    {{ end }}
+                                {{ end }}
+                            {{ end }}
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </article>
+    </div>
+</div>
+
+{{ partial "footer.html" . }}
