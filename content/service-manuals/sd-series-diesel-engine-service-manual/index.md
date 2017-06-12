@@ -2,7 +2,7 @@
 type="ServiceManual"
 title="SD Series Diesel Engine Service Manual"
 url="service-manuals/sd-series-diesel-engine-service-manual/"
-file=["sd-series-diesel-engine-service-manual.zip", "51.8MB"]
+file=["sd-series-diesel-engine-service-manual.zip", "https://drive.google.com/uc?export=download&id=0B_LEG9CGWI3wdXdmWm9CMVRDc1U", "51.8MB"]
 cover_pages=2
 +++
 
