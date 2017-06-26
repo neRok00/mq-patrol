@@ -5,4 +5,4 @@ This website was originally on a CMS, but has since been converted to static fil
 
 The Hugo code can be found in the `archetypes` and `layouts` folders, along with the data used by Hugo in the `content` and `static` folders. The Hugo config has been adjusted to output the static website to the `docs` folder, which is compatible for hosting via Github Pages.
 
-FYI, the website in question is a wiki for the [160 Nissan Patrol](https://en.wikipedia.org/wiki/Nissan_Patrol#160) produced from 1980, and it can be viewed at [MQ-Patrol.com](www.mq-patrol.com)
+FYI, the website in question is a wiki for the [160 Nissan Patrol](https://en.wikipedia.org/wiki/Nissan_Patrol#160) produced from 1980, and it can be viewed at [MQ-Patrol.com](http://www.mq-patrol.com/)
