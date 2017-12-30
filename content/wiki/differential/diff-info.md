@@ -52,7 +52,7 @@ tags = ["Differential"]
             <td>Standard 160/MQ & 260 Patrol front diff. Sometimes used in the rear of MQ's (not Australia). R200A in other Nissans have the same internals.</td>
         </tr>
         <tr>
-            <td>H233</td>
+            <td>H233<br>(aka H233B v1)</td>
             <td>Banjo. 3rd member with 9x12mm bolts.</td>
             <td>31</td>
             <td>32.0mm (1.26'')</td>
@@ -61,11 +61,11 @@ tags = ["Differential"]
             <td>9</td>
             <td>10mm</td>
             <td>180mm</td>
-            <td>Standard 160/MQ rear in Australia.</td>
+            <td>Standard 160/MQ rear in Australia. This model was revised by Nissan sometime between 1986 and 1989 ((source)[http://www.nissanpathfinders.net/forum/topic/31733-92-hb-truck-donor-organs/#entry598454]), creating the H233B v2 diff below.</td>
         </tr>
         <tr>
-            <td rowspan="2">H233B</td>
-            <td rowspan="2">Banjo. 3rd member with 11x??mm studs.</td>
+            <td rowspan="2">H233B (v2)</td>
+            <td rowspan="2">Banjo. 3rd member with 11x12mm studs.</td>
             <td>31</td>
             <td>32.0mm (1.26'')</td>
             <td>233mm</td>

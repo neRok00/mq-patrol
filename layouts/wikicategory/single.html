@@ -17,7 +17,7 @@
                             {{ $compare := .Title }}
                             {{ range $term, $terms := .Site.Taxonomies.tags }}
                             {{ if eq $term $compare }}
-                                {{ range $terms.Pages }}
+                                {{ range sort $terms.Pages "LinkTitle" "asc" }}
                                 <tr>
                                     <td><a href="{{ .Permalink}}" style="display: block">{{ .LinkTitle }}</a></td>
                                     <td class="text-center">
