@@ -103,7 +103,7 @@
                           {{ $title := replace $title "Gq" "GQ" }}
                           {{ $title := replace $title "Gu" "GU" }}
                           {{ $title := replace $title "Efi" "EFI" }}
-                      <li><a href='{{ $.Scratch.Get "path" }}'>{{ $title }}</a></li>
+                      <li><a href="{{ $.Scratch.Get "path" }}/">{{ $title }}</a></li>
                       {{ $.Scratch.Add "path" "/" }}
                       {{ end }}
                   {{ end }}
