@@ -9,5 +9,4 @@ url="wiki/brakes/"
 *   Rear drum brakes
 *   Handbrake
 *   Brake booster
-*   Brake master cylinder
-*   Proportioning valve
+*   Hydraulic system

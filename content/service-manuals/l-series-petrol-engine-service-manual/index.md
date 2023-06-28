@@ -1,6 +1,7 @@
 +++
 type="ServiceManual"
 title="L Series Petrol Engine Service Manual"
+scope="Engine"
 url="service-manuals/l-series-petrol-engine-service-manual/"
 file=["l-series-petrol-engine-service-manual.pdf", "l-series-petrol-engine-service-manual.pdf", "11.0MB"]
 cover_pages=3

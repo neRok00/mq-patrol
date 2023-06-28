@@ -8,5 +8,5 @@ url="wiki/steering/"
 *   Manual steering
 *   Power steering
 *   Draglink relay setup
-*   Single draglink conversion
 *   Tie-rod
+*   Upgrades and conversion

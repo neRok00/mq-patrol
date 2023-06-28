@@ -88,9 +88,7 @@
 
         {{ if .IsPage }}
             <ol class="breadcrumb">
-                <span>You are here:</span>
                 <li><a href="{{ absURL "/" }}">Home</a></li>
-
                 {{ $.Scratch.Add "path" .Site.BaseURL }}
                   {{ range $index, $element := split .RelPermalink "/" }}
                     {{ $.Scratch.Add "path" $element }}
@@ -107,20 +105,7 @@
                       {{ $.Scratch.Add "path" "/" }}
                       {{ end }}
                   {{ end }}
-                </ol>
-                
             </ol>
         {{ end }}
 
-        <div style="margin:1em 0 2em;">
-            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-            <!-- Responsive - Text+Display -->
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-8565564742755576"
-                 data-ad-slot="4327851087"
-                 data-ad-format="auto"></ins>
-            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-        </div>
-        
-        <div class="row">
+    <div class="row">
