@@ -134,12 +134,6 @@ article > h1 {
     margin-top: 0;
 }
 
-div#content img {
-    display: block;
-    height: auto;
-    max-width: 100%;
-    padding: 1em;
-}
 dd {
     margin-left: 2em;
 }
@@ -239,6 +233,19 @@ a.thumbnail:hover {
 }
 #content table tr td:empty {
     border-left: none;
+}
+
+#content table tr td:has(a img) {
+    display: inline-flex;
+}
+
+#content img {
+    display: block;
+    margin: 0.5em;
+    padding: unset;
+    min-height: 100px;
+    min-width: 100px;
+    max-width: 100%;
 }
 
 table ul {

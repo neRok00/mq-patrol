@@ -1,5 +1,5 @@
 +++
-title = "Glow Plugs - How to Manuall Glow"
+title = "Glow Plugs - How to manually activate the glowplugs"
 date = "2016-08-01T01:01:01+08:00"
 tags = ["Engine - SD33"]
 +++
