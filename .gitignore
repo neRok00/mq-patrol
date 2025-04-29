@@ -1,2 +1,3 @@
-*.exe
-*.todo
+.gh-pages/
+.project-admin/
+.zip-files/

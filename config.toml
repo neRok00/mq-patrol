@@ -6,7 +6,7 @@ pluralizelisttitles = "false"
 preserveTaxonomyNames = "true"
 disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
 
-publishDir = "docs"
+publishDir = ".gh-pages/"
 
 [params]
 
