@@ -1,18 +1,15 @@
 {{ partial "header.html" . }}
 
-<div class="inner-content">
-    <article class="content custom-content-default-view">
+    <main class="content">
         
-        <h1 style="margin-left: 10px;">{{ .Title }}</h1>
+        <h1>{{ .Title }}</h1>
 
-        <h2 style="margin-left: 10px;">Vehicle</h2>
-        <div class="row" style="margin-left: 4px; margin-right: 4px;">
+        <h2>Vehicle</h2>
+        <div class="row">
             {{ range where (where .Site.Pages.ByTitle "Type" "ServiceManual") "Params.scope" "==" "Vehicle" }}
-                <div class="col-xs-6 col-sm-4 col-md-3" style="padding-left: 4px; padding-right: 4px;">
-                    <a href="{{ .RelPermalink }}" class="thumbnail text-center service_manual" style="padding: 4px; overflow: clip;">
-                        <div>
-                            <img src="{{ .RelPermalink }}/cover-small.jpg" alt="{{ .Title }}">
-                        </div>
+                <div class="col-xs-6 col-md-3 link-box">
+                    <a href="{{ .RelPermalink }}">
+                        <div><img src="{{ .RelPermalink }}/cover-small.jpg" alt="{{ .Title }}"></div>
                         <h2 class="h4">{{ .Title }}</h2>
                         <button class="btn btn-primary" role="button">Browse</button>
                     </a>
@@ -20,14 +17,12 @@
             {{ end }}
         </div>
 
-        <h2 style="margin-left: 10px;">Engine</h2>
-        <div class="row" style="margin-left: 4px; margin-right: 4px;">
+        <h2>Engine</h2>
+        <div class="row">
             {{ range where (where .Site.Pages.ByTitle "Type" "ServiceManual") "Params.scope" "==" "Engine" }}
-                <div class="col-xs-6 col-sm-4 col-md-3" style="padding-left: 4px; padding-right: 4px;">
-                    <a href="{{ .RelPermalink }}" class="thumbnail text-center service_manual" style="padding: 4px; overflow: clip;">
-                        <div>
-                            <img src="{{ .RelPermalink }}/cover-small.jpg" alt="{{ .Title }}">
-                        </div>
+                <div class="col-xs-6 col-sm-3 link-box">
+                    <a href="{{ .RelPermalink }}">
+                        <div><img src="{{ .RelPermalink }}/cover-small.jpg" alt="{{ .Title }}"></div>
                         <h2 class="h4">{{ .Title }}</h2>
                         <button class="btn btn-primary" role="button">Browse</button>
                     </a>
@@ -35,7 +30,6 @@
             {{ end }}
         </div>
 
-    </article>
-</div>
+    </main>
 
 {{ partial "footer.html" . }}

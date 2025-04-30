@@ -1,39 +1,37 @@
 {{ partial "header.html" . }}
 
-<div class="col-md-12">
-    <div class="inner-content">
-        <article class="document-view content">
-            <h1>Chapter {{ .Params.number }} - {{ .Title }}</h1>
+    <style>body > .container {width: 100%} .breadcrumb {width: auto; max-width: 1170px; margin: 0 auto 20px;}</style>
 
-            <div class="row">
-                
-                {{ $file_count := .Params.pages }}
-                {{ $.Scratch.Set "file_count" $file_count }}
-                {{ $file_prefix := .Params.file_prefix }}
-                
-                {{ range seq $file_count }}
-                    {{ $.Scratch.Set "file_name" "" }}
-                    {{ if $file_prefix }}
-                        {{ $.Scratch.Add "file_name" $file_prefix }}
-                        {{ $.Scratch.Add "file_name" "-" }}
-                    {{ end }}
-                    {{ if and (ge ($.Scratch.Get "file_count") 100) (lt . 100) }}
-                        {{ $.Scratch.Add "file_name" "0" }}
-                    {{ end }}
-                    {{ if lt . 10 }}
-                        {{ $.Scratch.Add "file_name" "0" }}
-                    {{ end }}
-                    {{ $.Scratch.Add "file_name" (plainify .) }}
-                    <div class="col-xs-6">
-                        <a href="{{ $.Scratch.Get "file_name" }}.jpg" class="thumbnail text-center" target="_blank">
-                            <img src="{{ $.Scratch.Get "file_name" }}.jpg" alt="{{ $.Scratch.Get "file_name" }}.jpg" class="img-responsive img-thumbnail">
-                        </a>
-                    </div>
-                {{ end }}
-            </div>
+    <main class="content">
+        <h1>Chapter {{ .Params.number }} - {{ .Title }}</h1>
+
+        <div class="row">
             
-        </article>
-    </div>
-</div>
+            {{ $file_count := .Params.pages }}
+            {{ $.Scratch.Set "file_count" $file_count }}
+            {{ $file_prefix := .Params.file_prefix }}
+            
+            {{ range seq $file_count }}
+                {{ $.Scratch.Set "file_name" "" }}
+                {{ if $file_prefix }}
+                    {{ $.Scratch.Add "file_name" $file_prefix }}
+                    {{ $.Scratch.Add "file_name" "-" }}
+                {{ end }}
+                {{ if and (ge ($.Scratch.Get "file_count") 100) (lt . 100) }}
+                    {{ $.Scratch.Add "file_name" "0" }}
+                {{ end }}
+                {{ if lt . 10 }}
+                    {{ $.Scratch.Add "file_name" "0" }}
+                {{ end }}
+                {{ $.Scratch.Add "file_name" (plainify .) }}
+                <div class="col-xs-6">
+                    <a href="{{ $.Scratch.Get "file_name" }}.jpg" class="thumbnail text-center" target="_blank">
+                        <img src="{{ $.Scratch.Get "file_name" }}.jpg" alt="{{ $.Scratch.Get "file_name" }}.jpg" class="img-responsive img-thumbnail">
+                    </a>
+                </div>
+            {{ end }}
+        </div>
+        
+    </article>
 
 {{ partial "footer.html" . }}
