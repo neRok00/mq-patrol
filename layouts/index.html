@@ -1,99 +1,41 @@
 {{ partial "header.html" . }}
-     
 
-<div class="inner-content">
-    <article class="content custom-content-default-view">
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <div id="carousel" class="carousel slide mod thumbnail">
-                    <!-- Indicators -->
-                    <ol class="carousel-indicators">
-                        <li data-target="#carousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#carousel" data-slide-to="1" class=""></li>
-                        <li data-target="#carousel" data-slide-to="2" class=""></li>
-                        <li data-target="#carousel" data-slide-to="3" class=""></li>
-                        <li data-target="#carousel" data-slide-to="4" class=""></li>
-                    </ol>
-                    <!-- Wrapper for slides -->
-                    <div class="carousel-inner" role="listbox">
-                    
-                        <div class="item active">
-                            <img src="/intro1.jpg">
-                            <div class="carousel-caption">
-                                <h3><a href="/wiki/engine-sd33/fuel-filters">Fuel Filters</a></h3>
-                            </div>
-                        </div>
-                        
-                        <div class="item">
-                            <img src="/intro2.jpg">
-                            <div class="carousel-caption">
-                                <h3><a href="/wiki/differential/gu-lock-ring-conversion-how-to">GU Lock Ring Conversion - How To</a></h3>
-                            </div>
-                        </div>
+    <style>
+        h1 {text-align: center; width: 100%;} h1 span {color: #555; font-size: 90%;} .thumbnail {margin-bottom: 0;}
+        div.blocks > div {display: flex; flex-flow: row nowrap; justify-content: stretch; align-items: stretch; gap: 1em; text-align: center; width: 100%; margin: 2em 0;}
+        img {object-fit: contain; width: 100%;} img.green160 {padding-top: 10px; width: 80%;} img.safari {padding: 0 20px 0 0px; width: 78%;}
+        @media (max-width:992px) {
+            div.blocks {display: flex; gap: 1em;} div.blocks > div {flex-flow: column nowrap; justify-content: space-evenly;}
+            div.pics img {width: 100%;}
+        }
+    </style>
 
-                        <div class="item">
-                            <img src="/intro3.jpg">
-                            <div class="carousel-caption">
-                                <h3><a href="/wiki/differential/stage-1-wheel-bearings">Front Diff Rebuild - Stage 1 (Wheel Bearings)</a></h3>
-                            </div>
-                        </div>
+    <main class="content">
 
-                        <div class="item">
-                            <img src="/intro4.jpg">
-                            <div class="carousel-caption">
-                                <h3><a href="/wiki/body/body-swap">Body Swap</a></h3>
-                            </div>
-                        </div>
+        <h1>Nissan 160 Patrol <span>(MQ & MK)</span></h1>
 
-                        <div class="item">
-                            <img src="/intro5.jpg">
-                            <div class="carousel-caption">
-                                <h3><a href="/wiki/engine-sd33/boost-gauge">Boost Gauge</a></h3>
-                            </div>
-                        </div>
-                        
-                    </div>
-                    <!-- Controls -->
-                    <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                    </a>
-                </div>
+        <div class="blocks">
+            <div class="pics">
+                <img src="/literature-history_patrol.jpg" class="img-thumbnail green160">
+                <img src="/literature-161_SWB_AD.jpg" class="img-thumbnail">
+                <img src="/literature-safari.jpg" class="img-thumbnail safari">
+            </div>
+
+            <div class="links">
+                <a href="/wiki/" class="thumbnail col-xs-12 col-md-4">
+                    <h2>Wiki</h2>
+                    <p class="panel-body">A collection of articles and guides gathered from fellow MQ enthusiasts.</p>
+                </a>
+                <a href="/service-manuals/" class="thumbnail col-xs-12 col-md-5">
+                    <h2>Service Manuals</h2>
+                    <p class="panel-body">An archive of factory service manuals for the vehicle and engines.</p>
+                </a>
+                <a href="/wiki/other/faq/" class="thumbnail col-xs-12 col-md-4">
+                    <h2>Sitemap</h2>
+                    <p class="panel-body">Start here to get answers to common problems and stuff.</p>
+                </a>
             </div>
         </div>
-
-        <div class="home-flex" style="flex-wrap: nowrap; max-width: 800px;margin-left: auto;margin-right: auto;">
-            <a href="/wiki/" class="thumbnail" style="margin: 5px;"><div>
-                <h2>Wiki</h2>
-                <p class="panel-body">A collection of articles and guides gathered from fellow MQ enthusiasts.</p>
-            </div></a>
-            <a href="/service-manuals/" class="thumbnail" style="margin: 5px;"><div>
-                <h2>Service Manuals</h2>
-                <p class="panel-body">An archive of factory service manuals for the vehicle and engines.</p>
-            </div></a>
-        </div>
-        
-        <div class="home-flex" style="flex-wrap: nowrap; max-width: 800px;margin-left: auto;margin-right: auto;">
-            <a href="/wiki/other/faq/" class="thumbnail" style="margin: 5px;"><div>
-                <h2><span class="hidden-xs">Frequently Asked Questions</span><span class="visible-xs">FAQ</span></h2>
-                <p class="panel-body">Start here to get answers to common problems.</p>
-            </div></a>
-            <a href="/wiki/other/buyers-guide/" class="thumbnail" style="margin: 5px;"><div>
-                <h2>Buyers Guide</h2>
-                <p class="panel-body">Info about the common issues of MQ Patrols.</p>
-            </div></a>
-        </div>
-
-        <script type="text/javascript">
-            $('#carousel').carousel();
-        </script>
-        
-    </article>
-</div>
-        
+    </main>
+ 
 {{ partial "footer.html" . }}
