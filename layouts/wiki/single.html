@@ -4,6 +4,20 @@
         <h1>{{ .Title }}</h1>
 
         <div class="row content">
+
+            <div  class="doc_tags col-xs-12 col-sm-7 col-md-8">
+                <pre>
+                    <ul class="breadcrumb">
+                        <li><a href="/wiki/" style="font-size: 50%;">Wiki#Tags</a> ~ </li>
+                        <span></span>
+                        {{ range .Params.tags }}
+                        <li><a class="label label-default" href="../../{{ replace (urlize .) "---" "-" }}">{{ . }}</a></li>
+                        {{ end }}
+                        <span class="pull-right">Published: {{ .Date.Format "2006-01-02" }}</span>
+                    </ul>
+                </pre>
+            </div>
+
             <div class="col-xs-12 col-sm-5 col-md-4 pull-right">
                 <div id="panel-wrap-toc" class="panel panel-primary toc">
                     <div id="panel-heading-toc" class="panel-heading" data-toggle="collapse" data-target="#panel-toc" aria-expanded="true">
@@ -13,15 +27,6 @@
                         <div id="generated-toc"></div>
                     </div>
                 </div>
-            </div>
-
-            <div class="col-xs-12 col-sm-7 col-md-8">
-                <ul class="breadcrumb tags">
-                    Tagged with:
-                    {{ range .Params.tags }}
-                    <li><a class="label label-default" href="../../{{ replace (urlize .) "---" "-" }}">{{ . }}</a></li>
-                    {{ end }}
-                </ul>
             </div>
 
             <main id="content" class="content panel-body">

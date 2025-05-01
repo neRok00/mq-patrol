@@ -21,8 +21,8 @@
 <body class=" view-default ">
 
     <nav class="navbar navbar-static-top navbar-inverse" role="navigation" id="navbar-view">
-        <div class="container"><div>
-            <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="container">
+        <div>
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-view-collapse">
                 <span class="sr-only">Toggle navigation</span>
@@ -34,7 +34,7 @@
                 <span class="label logo-outer">MQ<span class="label logo-inner">Patrol</span></span>
                 </a>
             </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
+
             <div id="navbar-view-collapse" class="collapse navbar-collapse">
                 <ul class="navbar-nav nav">
                     {{ $currentNode := . }}
@@ -44,7 +44,7 @@
                         </li>
                     {{ end }}
                 </ul>
-                <div class="navbar-nav col-md-6 navbar-right">
+                <div class="navbar-nav col-md-4 navbar-right">
                     <div class="navbar-form">
                         <div class="input-group col-xs-12 has-feedback navbar-right">
                             <input type="text" class="form-control">
@@ -53,13 +53,14 @@
                     </div>
                 </div>
             </div>
-        </div></div>
+        </div>
+        </div>
     </nav>
 
     <div class="container">
 
         {{ if .IsPage }}
-            <ol class="breadcrumb well well-sm">
+            <ol class="breadcrumb">
                 <li><a href="{{ absURL "/" }}">Home</a></li>
                 {{ $.Scratch.Add "path" .Site.BaseURL }}
                 {{ range $index, $element := split .RelPermalink "/" }}

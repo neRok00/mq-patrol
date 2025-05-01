@@ -1,41 +1,134 @@
 {{ partial "header.html" . }}
 
-    <style>
-        h1 {text-align: center; width: 100%;} h1 span {color: #555; font-size: 90%;} .thumbnail {margin-bottom: 0;}
-        div.blocks > div {display: flex; flex-flow: row nowrap; justify-content: stretch; align-items: stretch; gap: 1em; text-align: center; width: 100%; margin: 2em 0;}
-        img {object-fit: contain; width: 100%;} img.green160 {padding-top: 10px; width: 80%;} img.safari {padding: 0 20px 0 0px; width: 78%;}
-        @media (max-width:992px) {
-            div.blocks {display: flex; gap: 1em;} div.blocks > div {flex-flow: column nowrap; justify-content: space-evenly;}
-            div.pics img {width: 100%;}
-        }
-    </style>
-
     <main class="content">
 
-        <h1>Nissan 160 Patrol <span>(MQ & MK)</span></h1>
+        <h1>Nissan 160 Patrol</h1>
+        <h2 class="subheading">
+            <span>1980<i aria-hidden="true" class="glyphicon glyphicon-hand-left"></i>MQ</span>
+            <i aria-hidden="true" class="glyphicon glyphicon-road"></i>
+            <span>MK<i aria-hidden="true" class="glyphicon glyphicon-hand-right"></i>1987</span>
+        </h2>
 
-        <div class="blocks">
+        <div class="card_grid">
             <div class="pics">
-                <img src="/literature-history_patrol.jpg" class="img-thumbnail green160">
-                <img src="/literature-161_SWB_AD.jpg" class="img-thumbnail">
-                <img src="/literature-safari.jpg" class="img-thumbnail safari">
+                <div><img src="/literature-history_patrol.jpg" class="green_lwb"></div>
+                <div><img src="/literature-161_SWB_AD.jpg" class="red_swb"></div>
+                <div><img src="/literature-safari.jpg" class="yellow_swb"></div>
             </div>
 
             <div class="links">
-                <a href="/wiki/" class="thumbnail col-xs-12 col-md-4">
-                    <h2>Wiki</h2>
-                    <p class="panel-body">A collection of articles and guides gathered from fellow MQ enthusiasts.</p>
-                </a>
                 <a href="/service-manuals/" class="thumbnail col-xs-12 col-md-5">
                     <h2>Service Manuals</h2>
                     <p class="panel-body">An archive of factory service manuals for the vehicle and engines.</p>
                 </a>
+                <a href="/wiki/" class="thumbnail col-xs-12 col-md-4">
+                    <h2>Wiki Guides</h2>
+                    <p class="panel-body">A collection of articles and guides gathered from fellow MQ enthusiasts.</p>
+                </a>
                 <a href="/wiki/other/faq/" class="thumbnail col-xs-12 col-md-4">
-                    <h2>Sitemap</h2>
-                    <p class="panel-body">Start here to get answers to common problems and stuff.</p>
+                    <h2>Search Tool</h2>
+                    <p class="panel-body">
+                        On this page you can search through all of the wiki's content, to find what you want quicker!<br><br>
+                        <strong class="alert alert-success well-sm">Works offline!</strong>
+                    </p>
                 </a>
             </div>
         </div>
+
     </main>
- 
+    
+    <style>
+        .container {padding: 0 1vmin;}
+        main {display: flex; flex-flow: column nowrap; align-items: center; text-align: center;}
+        @font-face {font-family: "Rubik"; src: url("/fonts/Rubik-Bold.ttf") format("truetype"); }
+        h1 {
+            font-family: "Rubik", Impact, sans-serif;
+            color: #333;
+            font-size: 5em;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-shadow: 4px 0 2px white, -4px -0 2px white;
+            margin: 0;
+            padding: 5vmin 20px;
+            width: 100%;
+            position: relative;
+        }
+        h1::after {
+            content: "";
+            position: absolute;
+            height: 0;
+            width: 100%;
+            top: 50%;
+            left: 0;
+            z-index: -1;
+            box-shadow: 0 -5px 4px 2px #d9534f, 0 5px 4px 2px #337ab7;
+        }
+        h2.subheading {
+            font-family: "Rubik", Impact, sans-serif;
+            color: #666;
+            font-size: 3em;
+            margin: 2vmin;
+            padding-bottom: 0.6em;
+            width: 100%;
+            & span:last-of-type {direction: rtl;}
+            & i[class*="road"] {padding: 0 2vmin; vertical-align: bottom;}
+            & i:not([class*="road"]) {font-size: 36%; width: 36px; top: -6px; color: #888;}
+        }
+        div.card_grid {
+            display: grid;
+            grid-template-columns: 30% 38% 30%;
+            grid-template-rows: 1fr;
+            justify-items: center;
+            align-items: stretch;
+            gap: 2vmin;
+            margin: 2vmin 0 0;
+        }
+        div.card_grid > div {
+            display: grid;
+            grid-template-columns: subgrid;
+            grid-template-rows: subgrid;
+            grid-column: span 3;
+        }
+        .pics div {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 4px;
+            align-content: center;
+        }
+        .pics img {
+            object-fit: cover;
+            height: auto;
+            width: 100%;
+        }
+        .pics img.green_lwb {
+            object-position: 0 24px;
+            margin-top: -24px;
+            padding: 0 20px;
+        }
+        .pics img.yellow_swb {
+            object-position: -14px 0;
+            margin-right: -14px;
+            padding: 0 46px;
+        }
+        .links a {
+            width: 100%;
+            margin: 0;
+            align-content: first baseline;
+            &:hover {text-decoration: none;}
+            p {max-width: 300px; margin: 0 auto;}
+            h2 {display: inline-block; width: 100%;}
+        }
+        @media (max-width:992px) {
+            div.card_grid {grid-template-columns: 1fr 45%;}
+            div.card_grid > div {grid-row: span 3;}
+            div.card_grid > div.pics {grid-column: 1;}
+            div.card_grid > div.links {grid-column: 2;}
+            h1 {font-size: 4em;}
+        }
+        @media (max-width:651px) {
+            h2.subheading{font-size: 1.5em;}
+            .pics img.green_lwb, .pics img.yellow_swb {padding: 0;}
+        }
+    </style>
+
 {{ partial "footer.html" . }}

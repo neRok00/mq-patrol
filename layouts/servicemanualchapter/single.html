@@ -1,9 +1,20 @@
 {{ partial "header.html" . }}
 
-    <style>body > .container {width: 100%} .breadcrumb {width: auto; max-width: 1170px; margin: 0 auto 20px;}</style>
+    <style>
+    body > .container {width: 100%}
+    .breadcrumb {width: auto; max-width: 1170px; margin: 0 auto 20px;}
+    h1 { display: flex; align-items: center; margin-bottom: 0.6em; gap: 0.5em; & a {margin: 0 !important; }}
+
+    </style>
+    {{ range where (where .Site.Pages.ByTitle "Type" "ServiceManual") ".Params.url" "in" .RelPermalink }}{{ $.Scratch.Set "ServiceManual" . }}{{ end }}
 
     <main class="content">
-        <h1>Chapter {{ .Params.number }} - {{ .Title }}</h1>
+
+        <h1>
+            <a class="well-sm well text-muted small" href="/{{ ($.Scratch.Get "ServiceManual").Params.url }}">
+                <i aria-hidden="true" class=" glyphicon glyphicon-level-up"></i></a>
+            Chapter {{ .Params.number }} - {{ .Title }}
+        </h1>
 
         <div class="row">
             
