@@ -7,10 +7,10 @@
         <h2>Vehicle</h2>
         <div class="row">
             {{ range where (where .Site.Pages.ByTitle "Type" "ServiceManual") "Params.scope" "==" "Vehicle" }}
-                <div class="col-xs-6 col-md-3 link-box">
+                <div class="col-xs-6 col-md-3 link_box">
                     <a href="{{ .RelPermalink }}">
                         <div><img src="{{ .RelPermalink }}/cover-small.jpg" alt="{{ .Title }}"></div>
-                        <h2 class="h4">{{ .Title }}</h2>
+                        <h2 class="h4 col-xs-10 col-md-12">{{ .Title }}</h2>
                         <button class="btn btn-primary" role="button">Browse</button>
                     </a>
                 </div>
@@ -20,10 +20,10 @@
         <h2>Engine</h2>
         <div class="row">
             {{ range where (where .Site.Pages.ByTitle "Type" "ServiceManual") "Params.scope" "==" "Engine" }}
-                <div class="col-xs-6 col-sm-3 link-box">
+                <div class="col-xs-6 col-md-3 link_box">
                     <a href="{{ .RelPermalink }}">
                         <div><img src="{{ .RelPermalink }}/cover-small.jpg" alt="{{ .Title }}"></div>
-                        <h2 class="h4">{{ .Title }}</h2>
+                        <h2 class="h4 col-xs-10 col-md-12">{{ .Title }}</h2>
                         <button class="btn btn-primary" role="button">Browse</button>
                     </a>
                 </div>

@@ -79,7 +79,24 @@ article img {
 
 article .doc_tags pre {
     white-space-collapse: collapse;
-    padding: 3px; & ul {margin-bottom: 0;}
+    padding: 3px; margin-bottom: 1.4em;
+    & ul {margin-bottom: 0;}
+    & li + li::before {content: "& ";}
+    & li .label {position: relative; top: -1px;}
+}
+
+article main.content > :first-child {
+    margin-top: 0;
+}
+
+article main.content [id] {
+    border-bottom: 1px solid #eaecf0;
+    &:not(h2) {display: inline-block;}
+    i {
+        font-size: 8px;
+        margin: 0 8px 6px;
+        vertical-align: bottom;
+    }
 }
 
 article dd {
@@ -112,19 +129,18 @@ article dd {
 
 /* #region: page components */
 
-    /* #region: link-box */
-    div:has(> .link-box) {
+    /* #region: link_box */
+    div:has(> .link_box) {
         display: flex;
+        flex-flow: row wrap;
         align-items: stretch;
-        flex-flow: row wrap
+        justify-content: space-between;
+        row-gap: 2vmin;
     }
-    .link-box {
-        padding: 9px;
-    }
-    .link-box a {
+    .link_box a {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: end;
         text-align: center;
         padding: 4px;
         height: 100%;
@@ -137,15 +153,36 @@ article dd {
         -o-transition: border .2s ease-in-out;
         transition: border .2s ease-in-out;
     }
-    .link-box a:hover {
+    .link_box a:hover {
         border-color: #337ab7;
         text-decoration: none;
     }
-    .link-box ul {
+    .link_box a div {
+        flex-grow: 1;
+    }
+    .link_box img {
+        height: 100%;
+        width: auto;
+        object-fit: contain;
+        border: 1px solid #ccc;
+    }
+    .link_box a h2 {
+        min-height: 2.2em;
+        padding: 0 !important;
+        margin-left: auto;
+        margin-right: auto;
+        flex-grow: 0;
+        text-wrap: balance;
+    }
+    .link_box ul {
         color: #777;
         min-height: 9em;
         padding-left: 20%;
         text-align: left;
+    }
+    .link_box button {
+        padding-left: 0;
+        padding-right: 0;
     }
     /* #endregion */
 
@@ -165,6 +202,7 @@ article dd {
     .panel-heading[data-toggle].collapsed:after {
         content: "\e027" !important;
     }
+    .panel-heading i.pull-left {margin-right: 0.6em;}
     /* #endregion */
 
     /* #region: table of contents */

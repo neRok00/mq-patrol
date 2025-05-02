@@ -21,7 +21,7 @@
             <div class="col-xs-12 col-sm-5 col-md-4 pull-right">
                 <div id="panel-wrap-toc" class="panel panel-primary toc">
                     <div id="panel-heading-toc" class="panel-heading" data-toggle="collapse" data-target="#panel-toc" aria-expanded="true">
-                        <h2 class="panel-title">Table of Contents</h2>
+                        <h2 class="panel-title">Table of Contents<i aria-hidden="true" class="glyphicon glyphicon-th-list pull-left"></i></h2>
                     </div>
                     <div id="panel-toc" class="panel-collapse collapse in panel-body" role="tabpanel" aria-labelledby="#panel-heading-toc">
                         <div id="generated-toc"></div>
@@ -35,5 +35,11 @@
         </div>
 
     </article>
+
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", ()=>{
+            (window["headings"] ?? []).forEach((h)=>{h.innerHTML += `<a href="#${h.id}"><i class="glyphicon glyphicon-link"></i></a>`;})
+        });
+    </script>
 
 {{ partial "footer.html" . }}

@@ -4,13 +4,15 @@
         
         <h1>{{ .Title }}</h1>
 
+        <style>.link_box button * {font-weight: bold; text-transform: uppercase; text-shadow: 1px 1px 3px #286090; border-bottom: 1px solid #fff;}</style>
+
         <div class="row">
             {{ range where .Site.Pages.ByTitle "Type" "WikiCategory" }}
-                <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 link-box">
+                <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 link_box">
                     <a href="{{ .RelPermalink }}">
                         <h2 class="h4">{{ .Title }}</h2>
                         <div>{{ .Content }}</div>
-                        <button class="btn btn-primary" role="button">Browse '{{ .Title  }}'</button>
+                        <button class="btn btn-primary" role="button">Browse <b>{{ .Title  }}</b></button>
                     </a>
                 </div>
             {{ end }}
