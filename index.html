@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Welcome | MQ-Patrol.com</title>
+    <title>Home | MQ-Patrol.com</title>
 
     <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
     
@@ -19,11 +19,10 @@
 
 </head>
 
-<body class=" view-default ">
+<body class="view-default ">
 
     <nav class="navbar navbar-static-top navbar-inverse" role="navigation" id="navbar-view">
         <div class="container">
-            
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-view-collapse">
                 <span class="sr-only">Toggle navigation</span>
@@ -31,14 +30,12 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/" title="Welcome">
-                <span class="label label-primary logo">MQ<span class="label label-danger">Patrol</span></span>
+                <a class="navbar-brand" href="/" title="Home">
+                <span class="label logo-outer">MQ<span class="label logo-inner">Patrol</span></span>
                 </a>
             </div>
-            
-            <div class="collapse navbar-collapse"
-                id="navbar-view-collapse">
-                <ul class="nav navbar-nav">
+            <div id="navbar-view-collapse" class="collapse navbar-collapse">
+                <ul class="navbar-nav nav">
                     
                     
                         <li class="nav-item active">
@@ -46,49 +43,25 @@
                         </li>
                     
                         <li class="nav-item">
-                            <a class="nav-link" href="/wiki/">Wiki</a>
-                        </li>
-                    
-                        <li class="nav-item">
                             <a class="nav-link" href="/service-manuals/">Service Manuals</a>
                         </li>
                     
+                        <li class="nav-item">
+                            <a class="nav-link" href="/wiki/">Wiki</a>
+                        </li>
+                    
                 </ul>
-                <div class="navbar-form navbar-right">
-                    
-                    <script>
-                        (function() {
-                        var cx = 'partner-pub-8565564742755576:qu9oimxm6xx';
-                        var gcse = document.createElement('script');
-                        gcse.type = 'text/javascript';
-                        gcse.async = true;
-                        gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-                        var s = document.getElementsByTagName('script')[0];
-                        s.parentNode.insertBefore(gcse, s);
-                        })();
-                    </script>
-                    <gcse:searchbox-only></gcse:searchbox-only>
-                    <style>
-                        .gsc-control-cse .gsc-table-result {
-                            font-family : inherit;
-                        }
-
-                        .gsc-control-cse .gsc-input-box {
-                            height : inherit;
-                        }
-
-                        input.gsc-input,
-                        .gsc-input-box,
-                        .gsc-input-box-hover,
-                        .gsc-input-box-focus,
-                        .gsc-search-button, input.gsc-search-button-v2 {
-                            box-sizing  : content-box;
-                            line-height : normal;
-                            margin-top  : 0px;
-                        }
-                    </style>
-                    
-                </div>
+                <form class="navbar-form navbar-right" role="search" action="/search">
+                    <label class="sr-only" for="query">Search</label>
+                    <div class="input-group">
+                        <input type="text" name="query" class="form-control" placeholder="Search for..." >
+                        <span class="input-group-btn" style="vertical-align: top;">
+                            <button class="btn btn-default" type="submit">
+                                <i aria-hidden="true" class="input-group-text glyphicon glyphicon-search"></i>
+                            </button>
+                        </span>
+                    </div>
+                </form>
             </div>
         </div>
     </nav>
@@ -97,131 +70,181 @@
 
         
 
-    <div class="row">
 
-     
+    <main class="content">
 
-<div class="inner-content">
-    <article class="content custom-content-default-view">
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <div id="carousel" class="carousel slide mod thumbnail">
-                    
-                    <ol class="carousel-indicators">
-                        <li data-target="#carousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#carousel" data-slide-to="1" class=""></li>
-                        <li data-target="#carousel" data-slide-to="2" class=""></li>
-                        <li data-target="#carousel" data-slide-to="3" class=""></li>
-                        <li data-target="#carousel" data-slide-to="4" class=""></li>
-                    </ol>
-                    
-                    <div class="carousel-inner" role="listbox">
-                    
-                        <div class="item active">
-                            <img src="/intro1.jpg">
-                            <div class="carousel-caption">
-                                <h3><a href="/wiki/engine-sd33/fuel-filters">Fuel Filters</a></h3>
-                            </div>
-                        </div>
-                        
-                        <div class="item">
-                            <img src="/intro2.jpg">
-                            <div class="carousel-caption">
-                                <h3><a href="/wiki/differential/gu-lock-ring-conversion-how-to">GU Lock Ring Conversion - How To</a></h3>
-                            </div>
-                        </div>
+        <h1>Nissan 160 Patrol</h1>
+        <h2 class="subheading">
+            <span>1980<i aria-hidden="true" class="glyphicon glyphicon-hand-left"></i>MQ</span>
+            <i aria-hidden="true" class="glyphicon glyphicon-road"></i>
+            <span>MK<i aria-hidden="true" class="glyphicon glyphicon-hand-right"></i>1987</span>
+        </h2>
 
-                        <div class="item">
-                            <img src="/intro3.jpg">
-                            <div class="carousel-caption">
-                                <h3><a href="/wiki/differential/stage-1-wheel-bearings">Front Diff Rebuild - Stage 1 (Wheel Bearings)</a></h3>
-                            </div>
-                        </div>
+        <div class="card_grid">
+            <div class="pics">
+                <div><img src="/literature-history_patrol.jpg" class="green_lwb"></div>
+                <div><img src="/literature-161_SWB_AD.jpg" class="red_swb"></div>
+                <div><img src="/literature-safari.jpg" class="yellow_swb"></div>
+            </div>
 
-                        <div class="item">
-                            <img src="/intro4.jpg">
-                            <div class="carousel-caption">
-                                <h3><a href="/wiki/body/body-swap">Body Swap</a></h3>
-                            </div>
-                        </div>
+            <div class="links">
+                <a href="/service-manuals/" class="thumbnail col-xs-12 col-md-5">
+                    <h2>Service Manuals</h2>
+                    <p class="panel-body">An archive of factory service manuals for the vehicle and engines.</p>
+                </a>
+                <a href="/wiki/" class="thumbnail col-xs-12 col-md-4">
+                    <h2>Wiki Guides</h2>
+                    <p class="panel-body">A collection of articles and guides gathered from fellow MQ enthusiasts.</p>
+                </a>
+                <a href="/search/" class="thumbnail col-xs-12 col-md-4">
+                    <h2>Search Tool</h2>
+                    <p class="panel-body">
+                        On this page you can search through all of the Wiki content to find what you want.<br><br>
+                        <strong class="alert alert-info well-sm">Works offline!</strong>
+                    </p>
+                </a>
+            </div>
+        </div>
 
-                        <div class="item">
-                            <img src="/intro5.jpg">
-                            <div class="carousel-caption">
-                                <h3><a href="/wiki/engine-sd33/boost-gauge">Boost Gauge</a></h3>
-                            </div>
-                        </div>
-                        
+        <div style="align-self: stretch; margin: 4vmin -15px 0;">
+            <div class="col-xs-12 col-md-8 col-md-push-2">
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Website has reached End-Of-Life — May 2025</h3>
                     </div>
-                    
-                    <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                    </a>
+                    <div class="panel-body">
+                        <p>
+                            <div class="panel-title">
+                                <a href="http://www.patrol4x4.com/forum/members/nerok-3286/">@neRok</a> here! :D
+                            </div>
+                            <br>
+                            It was about 15 years ago when I started up an MQ wiki, <span>originally at <a href="https://web.archive.org/web/20101106124804/http://nerok.info/">neRok.info</a>.</span>
+                            <br>
+                            It's also been nearly 10 years since I owned an MQ. <span>So now seems a good time to let this site go offline.</span>
+                        </p>
+                        <p>
+                            Not all is lost though. Most pages should be archived on the <span><a href="https://web.archive.org/web/2/https://mq-patrol.com/">Wayback Machine</a>.</span>
+                            <br>
+                            And all of the sites code and content is available at <span><a href="https://github.com/neRok00/mq-patrol">github.com/neRok00/mq-patrol</a>.</span>
+                        </p>
+                        <p style="text-wrap: balance;">And to give it a proper send-off, I spruced up this home-page and created some new pages featuring a bunch of pics found on my HDD.</p>
+                        <a class="btn btn-success" href="/search/?query=2025&source=3">
+                            <span class="bg-success badge"><span class="text-success">
+                                Find them all at this link <i aria-hidden="true" class="glyphicon glyphicon-new-window"></i>
+                            </span></span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="home-flex" style="flex-wrap: nowrap; max-width: 800px;margin-left: auto;margin-right: auto;">
-            <a href="/wiki/" class="thumbnail" style="margin: 5px;"><div>
-                <h2>Wiki</h2>
-                <p class="panel-body">A collection of articles and guides gathered from fellow MQ enthusiasts.</p>
-            </div></a>
-            <a href="/service-manuals/" class="thumbnail" style="margin: 5px;"><div>
-                <h2>Service Manuals</h2>
-                <p class="panel-body">An archive of factory service manuals for the vehicle and engines.</p>
-            </div></a>
-        </div>
-        
-        <div class="home-flex" style="flex-wrap: nowrap; max-width: 800px;margin-left: auto;margin-right: auto;">
-            <a href="/wiki/other/faq/" class="thumbnail" style="margin: 5px;"><div>
-                <h2><span class="hidden-xs">Frequently Asked Questions</span><span class="visible-xs">FAQ</span></h2>
-                <p class="panel-body">Start here to get answers to common problems.</p>
-            </div></a>
-            <a href="/wiki/other/buyers-guide/" class="thumbnail" style="margin: 5px;"><div>
-                <h2>Buyers Guide</h2>
-                <p class="panel-body">Info about the common issues of MQ Patrols.</p>
-            </div></a>
-        </div>
+    </main>
+    
+    <style>
+        main {display: flex; flex-flow: column nowrap; align-items: center; text-align: center;}
+        @font-face {font-family: "Rubik"; src: url("/fonts/Rubik-Bold.ttf") format("truetype");}
+        .panel-body span {display: inline-block; break-inside: avoid;}
+        a.btn-success {text-transform: uppercase; font-weight: bold; letter-spacing: 1px;}
+        h1 {
+            font-family: "Rubik", Impact, sans-serif;
+            color: #333;
+            font-size: 5em;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-shadow: 4px 0 2px white, -4px -0 2px white;
+            margin: 0;
+            padding: 5vmin 20px;
+            width: 100%;
+            position: relative;
+        }
+        h1::after {
+            content: "";
+            position: absolute;
+            height: 0;
+            width: 99.9%;
+            top: 50%;
+            left: 0;
+            z-index: -1;
+            box-shadow: 0 -5px 4px 2px #d9534f, 0 5px 4px 2px #337ab7;
+        }
+        h2.subheading {
+            font-family: "Rubik", Impact, sans-serif;
+            color: #666;
+            font-size: 3em;
+            margin: 2vmin;
+            padding-bottom: 0.6em;
+            width: 100%;
+            & span:last-of-type {direction: rtl;}
+            & i[class*="road"] {padding: 0 2vmin; vertical-align: bottom;}
+            & i:not([class*="road"]) {font-size: 36%; width: 36px; top: -2px; vertical-align: middle; color: #888;}
+        }
+        div.card_grid {
+            display: grid;
+            grid-template-columns: 30% auto 30%;
+            grid-template-rows: 1fr;
+            justify-items: center;
+            align-items: stretch;
+            gap: 2vmin;
+            margin: 2vmin 0 0;
+        }
+        div.card_grid > div {
+            display: grid;
+            grid-template-columns: subgrid;
+            grid-template-rows: subgrid;
+            grid-column: span 3;
+        }
+        .pics div {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 4px;
+            align-content: center;
+        }
+        .pics img {
+            object-fit: cover;
+            height: auto;
+            width: 100%;
+        }
+        .pics img.green_lwb {
+            object-position: 0 24px;
+            margin-top: -24px;
+            padding: 0 20px;
+        }
+        .pics img.yellow_swb {
+            object-position: -14px 0;
+            margin-right: -14px;
+            padding: 0 46px;
+        }
+        .links a {
+            width: 100%;
+            margin: 0;
+            align-content: first baseline;
+            &:hover {text-decoration: none;}
+            p {max-width: 300px; margin: 0 auto;}
+            h2 {display: inline-block; width: 100%;}
+        }
+        @media (max-width:992px) {
+            div.card_grid {grid-template-columns: 1fr 45%;}
+            div.card_grid > div {grid-row: span 3;}
+            div.card_grid > div.pics {grid-column: 1;}
+            div.card_grid > div.links {grid-column: 2;}
+            h1 {font-size: 4em;}
+        }
+        @media (max-width:651px) {
+            h2.subheading{font-size: 1.5em;}
+            .pics img.green_lwb, .pics img.yellow_swb {padding: 0;}
+        }
+    </style>
 
-        <script type="text/javascript">
-            $('#carousel').carousel();
-        </script>
-        
-    </article>
-</div>
-        
 
-
-        </div>
-        
-        <div style="margin:2em 0 1em;">
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8565564742755576"
-                    crossorigin="anonymous"></script>
-            
-            <ins class="adsbygoogle"
-                    style="display:block"
-                    data-ad-client="ca-pub-8565564742755576"
-                    data-ad-slot="4327851087"
-                    data-ad-format="auto"
-                    data-full-width-responsive="true"></ins>
-            <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-        </div>
-        
     </div>
 
     <footer>
-        <div class="container">
-            <p>Wiki no longer actively maintained - Admin (<a href="http://www.patrol4x4.com/forum/members/nerok-3286/" target="_blank">neRok</a>)</p>
-            <p>Original content Copyright&ensp;<a target="_blank" class="label label-primary" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">CC BY-NC-SA 3.0</a></p>
-        </div>
+        Website EOL May 2025. Content: 
+        <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="license noopener noreferrer">
+            CC0 1.0
+            <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="CC">
+            <img src="https://mirrors.creativecommons.org/presskit/icons/zero.svg" alt="0">
+        </a>
     </footer>
 
     </body>

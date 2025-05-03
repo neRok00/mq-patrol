@@ -18,11 +18,10 @@
 
 </head>
 
-<body class=" view-default ">
+<body class="view-default ">
 
     <nav class="navbar navbar-static-top navbar-inverse" role="navigation" id="navbar-view">
         <div class="container">
-            
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-view-collapse">
                 <span class="sr-only">Toggle navigation</span>
@@ -31,63 +30,37 @@
                 <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="/" title="Wiki">
-                <span class="label label-primary logo">MQ<span class="label label-danger">Patrol</span></span>
+                <span class="label logo-outer">MQ<span class="label logo-inner">Patrol</span></span>
                 </a>
             </div>
-            
-            <div class="collapse navbar-collapse"
-                id="navbar-view-collapse">
-                <ul class="nav navbar-nav">
+            <div id="navbar-view-collapse" class="collapse navbar-collapse">
+                <ul class="navbar-nav nav">
                     
                     
                         <li class="nav-item">
                             <a class="nav-link" href="/">Home</a>
                         </li>
                     
-                        <li class="nav-item active">
-                            <a class="nav-link" href="/wiki/">Wiki</a>
-                        </li>
-                    
                         <li class="nav-item">
                             <a class="nav-link" href="/service-manuals/">Service Manuals</a>
                         </li>
                     
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/wiki/">Wiki</a>
+                        </li>
+                    
                 </ul>
-                <div class="navbar-form navbar-right">
-                    
-                    <script>
-                        (function() {
-                        var cx = 'partner-pub-8565564742755576:qu9oimxm6xx';
-                        var gcse = document.createElement('script');
-                        gcse.type = 'text/javascript';
-                        gcse.async = true;
-                        gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-                        var s = document.getElementsByTagName('script')[0];
-                        s.parentNode.insertBefore(gcse, s);
-                        })();
-                    </script>
-                    <gcse:searchbox-only></gcse:searchbox-only>
-                    <style>
-                        .gsc-control-cse .gsc-table-result {
-                            font-family : inherit;
-                        }
-
-                        .gsc-control-cse .gsc-input-box {
-                            height : inherit;
-                        }
-
-                        input.gsc-input,
-                        .gsc-input-box,
-                        .gsc-input-box-hover,
-                        .gsc-input-box-focus,
-                        .gsc-search-button, input.gsc-search-button-v2 {
-                            box-sizing  : content-box;
-                            line-height : normal;
-                            margin-top  : 0px;
-                        }
-                    </style>
-                    
-                </div>
+                <form class="navbar-form navbar-right" role="search" action="/search">
+                    <label class="sr-only" for="query">Search</label>
+                    <div class="input-group">
+                        <input type="text" name="query" class="form-control" placeholder="Search for..." >
+                        <span class="input-group-btn" style="vertical-align: top;">
+                            <button class="btn btn-default" type="submit">
+                                <i aria-hidden="true" class="input-group-text glyphicon glyphicon-search"></i>
+                            </button>
+                        </span>
+                    </div>
+                </form>
             </div>
         </div>
     </nav>
@@ -96,245 +69,201 @@
 
         
 
-    <div class="row">
 
-
-<div class="inner-content">
-    <article class="content custom-content-default-view">
+    <main class="content">
         
-        <h1 style="margin-left: 10px;">Wiki</h1>
+        <h1>Wiki</h1>
 
-        <div class="row" style="margin-left: 4px; margin-right: 4px;">
+        <style>.link_box button * {font-weight: bold; text-transform: uppercase; text-shadow: 1px 1px 3px #286090; border-bottom: 1px solid #fff;}</style>
+
+        <div class="row">
             
-            
-                <div class="col-xs-6 col-sm-4 col-md-3" style="padding-left: 4px; padding-right: 4px;">
-                    <a href="/wiki/body/" class="thumbnail text-center wiki">
+                <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 link_box">
+                    <a href="/wiki/body/">
                         <h2 class="h4">Body</h2>
-                        <div>
-                            <ul>
+                        <div><ul>
 <li>Panels</li>
 <li>Doors</li>
 <li>Windows</li>
 <li>Bullbars</li>
 <li>Chassis</li>
 </ul>
-
-                        </div>
-                        <button class="btn btn-primary" role="button">Browse 'Body'</button>
+</div>
+                        <button class="btn btn-primary" role="button">Browse <b>Body</b></button>
                     </a>
                 </div>
             
-                <div class="col-xs-6 col-sm-4 col-md-3" style="padding-left: 4px; padding-right: 4px;">
-                    <a href="/wiki/brakes/" class="thumbnail text-center wiki">
+                <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 link_box">
+                    <a href="/wiki/brakes/">
                         <h2 class="h4">Brakes</h2>
-                        <div>
-                            <ul>
+                        <div><ul>
 <li>Front disk brakes</li>
 <li>Rear drum brakes</li>
 <li>Handbrake</li>
 <li>Brake booster</li>
 <li>Hydraulic system</li>
 </ul>
-
-                        </div>
-                        <button class="btn btn-primary" role="button">Browse 'Brakes'</button>
+</div>
+                        <button class="btn btn-primary" role="button">Browse <b>Brakes</b></button>
                     </a>
                 </div>
             
-                <div class="col-xs-6 col-sm-4 col-md-3" style="padding-left: 4px; padding-right: 4px;">
-                    <a href="/wiki/differential/" class="thumbnail text-center wiki">
+                <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 link_box">
+                    <a href="/wiki/differential/">
                         <h2 class="h4">Differential</h2>
-                        <div>
-                            <ul>
+                        <div><ul>
 <li>Front C200 diff</li>
 <li>Rear H233 diff</li>
 <li>Rear H260 diff</li>
 <li>Lockers and LSD</li>
 </ul>
-
-                        </div>
-                        <button class="btn btn-primary" role="button">Browse 'Differential'</button>
+</div>
+                        <button class="btn btn-primary" role="button">Browse <b>Differential</b></button>
                     </a>
                 </div>
             
-                <div class="col-xs-6 col-sm-4 col-md-3" style="padding-left: 4px; padding-right: 4px;">
-                    <a href="/wiki/electrical/" class="thumbnail text-center wiki">
+                <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 link_box">
+                    <a href="/wiki/electrical/">
                         <h2 class="h4">Electrical</h2>
-                        <div>
-                            <ul>
+                        <div><ul>
 <li>Alternator</li>
 <li>Lights</li>
 <li>Wiring</li>
 <li>Battery</li>
 </ul>
-
-                        </div>
-                        <button class="btn btn-primary" role="button">Browse 'Electrical'</button>
+</div>
+                        <button class="btn btn-primary" role="button">Browse <b>Electrical</b></button>
                     </a>
                 </div>
             
-                <div class="col-xs-6 col-sm-4 col-md-3" style="padding-left: 4px; padding-right: 4px;">
-                    <a href="/wiki/engine-l28/" class="thumbnail text-center wiki">
+                <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 link_box">
+                    <a href="/wiki/engine-l28/">
                         <h2 class="h4">Engine - L28</h2>
-                        <div>
-                            <ul>
+                        <div><ul>
 <li>Specs</li>
 <li>Upgrades</li>
 <li>Carby</li>
 <li>Fuel Injection</li>
 </ul>
-
-                        </div>
-                        <button class="btn btn-primary" role="button">Browse 'Engine - L28'</button>
+</div>
+                        <button class="btn btn-primary" role="button">Browse <b>Engine - L28</b></button>
                     </a>
                 </div>
             
-                <div class="col-xs-6 col-sm-4 col-md-3" style="padding-left: 4px; padding-right: 4px;">
-                    <a href="/wiki/engine-p40/" class="thumbnail text-center wiki">
+                <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 link_box">
+                    <a href="/wiki/engine-p40/">
                         <h2 class="h4">Engine - P40</h2>
-                        <div>
-                            <ul>
+                        <div><ul>
 <li>Specs</li>
 <li>Upgrades</li>
 <li>Carby</li>
 <li>Fuel Injection</li>
 </ul>
-
-                        </div>
-                        <button class="btn btn-primary" role="button">Browse 'Engine - P40'</button>
+</div>
+                        <button class="btn btn-primary" role="button">Browse <b>Engine - P40</b></button>
                     </a>
                 </div>
             
-                <div class="col-xs-6 col-sm-4 col-md-3" style="padding-left: 4px; padding-right: 4px;">
-                    <a href="/wiki/engine-sd33/" class="thumbnail text-center wiki">
+                <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 link_box">
+                    <a href="/wiki/engine-sd33/">
                         <h2 class="h4">Engine - SD33</h2>
-                        <div>
-                            <ul>
+                        <div><ul>
 <li>Specs</li>
 <li>Upgrades</li>
 <li>Turbo</li>
 <li>Fuel Injection</li>
 </ul>
-
-                        </div>
-                        <button class="btn btn-primary" role="button">Browse 'Engine - SD33'</button>
+</div>
+                        <button class="btn btn-primary" role="button">Browse <b>Engine - SD33</b></button>
                     </a>
                 </div>
             
-                <div class="col-xs-6 col-sm-4 col-md-3" style="padding-left: 4px; padding-right: 4px;">
-                    <a href="/wiki/gearbox/" class="thumbnail text-center wiki">
+                <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 link_box">
+                    <a href="/wiki/gearbox/">
                         <h2 class="h4">Gearbox</h2>
-                        <div>
-                            <ul>
+                        <div><ul>
 <li>Manual gearbox</li>
 <li>Automatic gearbox</li>
 <li>Transfer-case</li>
 <li>Drive-shafts</li>
 <li>Clutch</li>
 </ul>
-
-                        </div>
-                        <button class="btn btn-primary" role="button">Browse 'Gearbox'</button>
+</div>
+                        <button class="btn btn-primary" role="button">Browse <b>Gearbox</b></button>
                     </a>
                 </div>
             
-                <div class="col-xs-6 col-sm-4 col-md-3" style="padding-left: 4px; padding-right: 4px;">
-                    <a href="/wiki/interior/" class="thumbnail text-center wiki">
+                <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 link_box">
+                    <a href="/wiki/interior/">
                         <h2 class="h4">Interior</h2>
-                        <div>
-                            <ul>
+                        <div><ul>
 <li>Dash</li>
 <li>Seats</li>
 <li>Trim</li>
 </ul>
-
-                        </div>
-                        <button class="btn btn-primary" role="button">Browse 'Interior'</button>
+</div>
+                        <button class="btn btn-primary" role="button">Browse <b>Interior</b></button>
                     </a>
                 </div>
             
-                <div class="col-xs-6 col-sm-4 col-md-3" style="padding-left: 4px; padding-right: 4px;">
-                    <a href="/wiki/other/" class="thumbnail text-center wiki">
+                <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 link_box">
+                    <a href="/wiki/other/">
                         <h2 class="h4">Other</h2>
-                        <div>
-                            <ul>
+                        <div><ul>
 <li>Buyers guide</li>
 <li>Engine conversions</li>
 <li>General specs</li>
 <li>Model comparisions</li>
 </ul>
-
-                        </div>
-                        <button class="btn btn-primary" role="button">Browse 'Other'</button>
+</div>
+                        <button class="btn btn-primary" role="button">Browse <b>Other</b></button>
                     </a>
                 </div>
             
-                <div class="col-xs-6 col-sm-4 col-md-3" style="padding-left: 4px; padding-right: 4px;">
-                    <a href="/wiki/steering/" class="thumbnail text-center wiki">
+                <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 link_box">
+                    <a href="/wiki/steering/">
                         <h2 class="h4">Steering</h2>
-                        <div>
-                            <ul>
+                        <div><ul>
 <li>Manual steering</li>
 <li>Power steering</li>
 <li>Draglink relay setup</li>
 <li>Tie-rod</li>
 <li>Upgrades and conversion</li>
 </ul>
-
-                        </div>
-                        <button class="btn btn-primary" role="button">Browse 'Steering'</button>
+</div>
+                        <button class="btn btn-primary" role="button">Browse <b>Steering</b></button>
                     </a>
                 </div>
             
-                <div class="col-xs-6 col-sm-4 col-md-3" style="padding-left: 4px; padding-right: 4px;">
-                    <a href="/wiki/suspension/" class="thumbnail text-center wiki">
+                <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 link_box">
+                    <a href="/wiki/suspension/">
                         <h2 class="h4">Suspension</h2>
-                        <div>
-                            <ul>
+                        <div><ul>
 <li>Leaf springs</li>
 <li>Shock absorbers</li>
 <li>Shackles</li>
 <li>Lift kits</li>
 <li>Custom mods</li>
 </ul>
-
-                        </div>
-                        <button class="btn btn-primary" role="button">Browse 'Suspension'</button>
+</div>
+                        <button class="btn btn-primary" role="button">Browse <b>Suspension</b></button>
                     </a>
                 </div>
             
-        
         </div>
 
-    </article>
-</div>
+    </main>
 
 
-
-        </div>
-        
-        <div style="margin:2em 0 1em;">
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8565564742755576"
-                    crossorigin="anonymous"></script>
-            
-            <ins class="adsbygoogle"
-                    style="display:block"
-                    data-ad-client="ca-pub-8565564742755576"
-                    data-ad-slot="4327851087"
-                    data-ad-format="auto"
-                    data-full-width-responsive="true"></ins>
-            <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-        </div>
-        
     </div>
 
     <footer>
-        <div class="container">
-            <p>Wiki no longer actively maintained - Admin (<a href="http://www.patrol4x4.com/forum/members/nerok-3286/" target="_blank">neRok</a>)</p>
-            <p>Original content Copyright&ensp;<a target="_blank" class="label label-primary" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">CC BY-NC-SA 3.0</a></p>
-        </div>
+        Website EOL May 2025. Content: 
+        <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="license noopener noreferrer">
+            CC0 1.0
+            <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="CC">
+            <img src="https://mirrors.creativecommons.org/presskit/icons/zero.svg" alt="0">
+        </a>
     </footer>
 
     </body>
