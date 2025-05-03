@@ -79,7 +79,7 @@ article img {
 
 article .doc_tags pre {
     white-space-collapse: collapse;
-    padding: 3px; margin-bottom: 1.4em;
+    padding: 3px; margin-bottom: 1.3em;
     & ul {margin-bottom: 0;}
     & li + li::before {content: "& ";}
     & li .label {position: relative; top: -1px;}

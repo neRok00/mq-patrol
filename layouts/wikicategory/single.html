@@ -19,7 +19,7 @@
                             <tr>
                                 <td><a href="{{ .Permalink}}" class="btn-block">{{ .LinkTitle }}</a></td>
                                 <td>
-                                    <ul class="list-group-item-text list-inline text-center">
+                                    <ul class="list-group-item-text list-inline text-center row">
                                         {{ range $type, $val := .Params.tags }}
                                             {{ if gt (len $val) 2 }}
                                                 <li>

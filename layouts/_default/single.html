@@ -4,4 +4,8 @@
         {{ .Content }}
     </main>
 
+    {{ if hasPrefix .Title "Search" }}
+        {{ partial "search.html" . }}
+    {{ end }}
+
 {{ partial "footer.html" . }}

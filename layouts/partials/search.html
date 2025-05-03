@@ -1,0 +1,137 @@
+<h1>Search the Wiki</h1>
+<br>
+<div class="panel panel-primary">
+    <div id="options_panel_heading" class="panel-heading" data-toggle="collapse" data-target="#options_panel_body" aria-expanded="true">
+        Options
+    </div>
+    <div id="options_panel_body" class="panel-body panel-collapse collapse in" role="tabpanel" aria-labelledby="#options_panel_heading">
+        <form id="options_form" onsubmit="event.preventDefault();update_table();">
+            <div class="form-group col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-0">
+                <label for="input_query">Query</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="input_query" name="input_query">
+                    <label class="input-group-addon" for="checkbox_regex">
+                        <input type="checkbox" id="checkbox_regex" name="checkbox_regex">
+                        Regex
+                    </label>
+                </div>
+            </div>
+            <div class="form-group col-sm-3 col-md-2">
+                <label for="select_target">Search in</label>
+                <select class="form-control" id="select_target" name="select_target">
+                    <option>Title & Content</option>
+                    <option>Title Only</option>
+                    <option>Content Only</option>
+                </select>
+            </div>
+            <div class="form-group col-sm-3 col-md-2">
+                <label for="select_tag">Filter by Tag</label>
+                <select class="form-control" id="select_tag" name="select_tag">
+                    <option>Any</option>
+                    {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+                        <option>{{ $name }}</option>
+                    {{ end }}
+                </select>
+            </div>
+            <div class="form-group col-sm-3 col-md-2">
+                <label for="select_sort">Sort by</label>
+                <select class="form-control" id="select_sort" name="select_sort">
+                    <option>Title A-Z</option>
+                    <option>Title Z-A</option>
+                    <option>Date Old-New</option>
+                    <option>Date New-Old</option>
+                </select>
+            </div>
+            <div class="col-sm-3 col-md-2" style="margin-top: 1.7em;">
+                <button type="button" class="btn btn-primary col-xs-8" id="btn_update" onclick="update_table();" name="btn_update">
+                    Update
+                </button>
+                <button type="button" class="btn btn-info col-xs-3 col-xs-push-1" id="btn_reset" onclick="reset_search();" name="btn_reset">
+                    <i class="glyphicon glyphicon-refresh" aria-hidden="true"></i><span class="visible-xs-inline col-xs-offset-1">Reset</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<table class="table table-striped table-condensed wiki_pages">
+    <thead>
+        <th>Title</th><th class="text-center">Tags</th><th>Date</th>
+    </thead>
+    <tbody>
+        {{ range sort (where .Site.Pages "Type" "==" "wiki") "Title" }}
+            {{ if ne .Title "Wiki"}}
+                <tr class="wiki_page" data-title="{{ .Title }}" data-content="{{ .Plain | jsonify }}" data-tags="{{ .Params.tags | jsonify }}" data-date="{{ .Date.Format "2006-01-02" }}">
+                    <td><a href="{{ .RelPermalink }}">{{ .Title }}</a></td>
+                    <td>
+                        <ul class="list-group-item-text list-inline text-center row">
+                            {{ range $type, $val := .Params.tags }}
+                                <li>
+                                    <a class="label label-default" href="../{{ replace (urlize .) "---" "-" }}">{{ . }}</a>
+                                </li>
+                            {{ end }}
+                        </ul>
+                    </td>
+                    <td>{{ .Date.Format "2006-01-02" }}</td>
+                </tr>
+            {{ end }}
+        {{ end }}
+    </tbody>
+</table>
+
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", ()=>{
+        let query = (new URLSearchParams(window.location.search)).get("q");
+        if (!query) {return};
+        document.querySelector("#input_query").value = query;
+        history.replaceState(history.state, '', window.location.pathname);
+        update_table();
+    });
+    function reset_search() {
+        document.querySelector("#options_form").reset();
+        update_table();
+    }
+    function update_table() {
+        const options = Object.fromEntries(new FormData(document.querySelector("#options_form")).entries());
+        const not_filterable = (options.checkbox_regex == false) ? ["", " ", "*"] : [".", ".*", ".+"];
+        const string_filter_fn = (options.checkbox_regex == false) ? String.prototype.includes : String.prototype.match;
+        // Set the rows visibility.
+        document.querySelectorAll("tr.wiki_page").forEach((row,i)=>{
+            // Hide rows that don't suit selected tag.
+            if ( (options.select_tag != "Any") && !(row.getAttribute("data-tags").includes(options.select_tag)) ) {
+                row.style.visibility = "collapse"; return;
+            }
+            // Check that the query input has a "filterable" value.
+            if (not_filterable.includes(options.input_query) == false) {
+                // Hide rows that don't match the query.
+                let found = false;
+                if (options.select_target.includes("Title")) {
+                    if (string_filter_fn.call(row.getAttribute("data-title"), options.input_query)) {found = true;}
+                }
+                if (options.select_target.includes("Content")) {
+                    if (string_filter_fn.call(row.getAttribute("data-content"), options.input_query)) {found = true;}
+                }
+                if (found == false) {
+                    row.style.visibility = "collapse"; return;
+                }
+            }
+            // All checks pass, so set the row as visible.
+            row.style.visibility = "visible";
+        });
+        // Sort the rows.
+        const tbody = document.querySelector("table.wiki_pages tbody");
+        const sort_fn = (()=>{
+            if (options.select_sort == "Title A-Z") {
+                return (a,b) => {return (a.getAttribute("data-title") > b.getAttribute("data-title")) ? 1 : -1;}
+            } else if (options.select_sort == "Title Z-A") {
+                return (a,b) => {return (a.getAttribute("data-title") < b.getAttribute("data-title")) ? 1 : -1;}
+            } else if (options.select_sort == "Date Old-New") {
+                return (a,b) => {return (a.getAttribute("data-date") > b.getAttribute("data-date")) ? 1 : -1;}
+            } else if (options.select_sort == "Date New-Old") {
+                return (a,b) => {return (a.getAttribute("data-date") < b.getAttribute("data-date")) ? 1 : -1;}
+            } else {return 0;}
+        })();
+        let sorted_rows = [...tbody.children].sort(sort_fn);
+        tbody.replaceChildren(...sorted_rows);
+    }
+</script>
