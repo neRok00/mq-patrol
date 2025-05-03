@@ -3,7 +3,7 @@ type="ServiceManual"
 title="MQ Patrol 160-61 Service Manual (1980)"
 scope="Vehicle"
 url="service-manuals/mq-service-manual-1980/"
-file=["mq-service-manual-1980.zip", "https://drive.google.com/uc?export=download&id=0B_LEG9CGWI3wam9JVklVS3Y3RE0", "126MB"]
+file=["mq-service-manual-1980.zip", "https://github.com/neRok00/mq-patrol/releases/download/zips/mq-service-manual-1980.zip", "126MB"]
 cover_pages=3
 +++
 

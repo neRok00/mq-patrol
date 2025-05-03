@@ -3,7 +3,7 @@ type="ServiceManual"
 title="L Series Petrol Engine Service Manual"
 scope="Engine"
 url="service-manuals/l-series-petrol-engine-service-manual/"
-file=["l-series-petrol-engine-service-manual.pdf", "l-series-petrol-engine-service-manual.pdf", "11.0MB"]
+file=["l-series-petrol-engine-service-manual.zip", "https://github.com/neRok00/mq-patrol/releases/download/zips/l-series-petrol-engine-service-manual.zip", "10.4MB"]
 cover_pages=3
 +++
 

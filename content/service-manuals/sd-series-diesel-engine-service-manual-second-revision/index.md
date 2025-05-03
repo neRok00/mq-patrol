@@ -3,7 +3,7 @@ type="ServiceManual"
 title="SD Series Diesel Engine Service Manual - 2nd Revision"
 scope="Engine"
 url="service-manuals/sd-series-diesel-engine-service-manual-second-revision/"
-file=["sd-series-diesel-engine-service-manual-second-revision.pdf", "sd-series-diesel-engine-service-manual-second-revision.pdf", "11.1MB"]
+file=["sd-series-diesel-engine-service-manual-second-revision.zip", "https://github.com/neRok00/mq-patrol/releases/download/zips/sd-series-diesel-engine-service-manual-second-revision.zip", "10.0MB"]
 cover_pages=2
 +++
 

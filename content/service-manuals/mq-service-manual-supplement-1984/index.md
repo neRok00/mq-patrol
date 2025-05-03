@@ -3,7 +3,7 @@ type="ServiceManual"
 title="MQ Service Manual Supplement III (1984)"
 scope="Vehicle"
 url="service-manuals/mq-service-manual-supplement-1984/"
-file=["mq-service-manual-supplement-1984.zip", "mq-service-manual-supplement-1984.zip", "1.0MB"]
+file=["mq-service-manual-supplement-1984.zip", "https://github.com/neRok00/mq-patrol/releases/download/zips/mq-service-manual-supplement-1984.zip", "1.0MB"]
 cover_pages=1
 +++
 

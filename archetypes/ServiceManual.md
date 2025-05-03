@@ -2,7 +2,7 @@
 type="ServiceManual"
 title=""
 scope=""
-file=[".pdf","MB"]
+file=["name","url","filesize"]
 cover_pages=1
 +++
 
