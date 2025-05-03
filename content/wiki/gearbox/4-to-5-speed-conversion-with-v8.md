@@ -1,6 +1,6 @@
 +++
 title = "4 to 5 Speed Conversion with V8"
-date = "2016-08-01T01:01:01+08:00"
+date = "2016-08-01"
 tags = ["Gearbox"]
 +++
 

@@ -1,6 +1,6 @@
 +++
 title = "EFI Conversion"
-date = "2016-08-01T01:01:01+08:00"
+date = "2016-08-01"
 tags = ["Engine - P40"]
 +++
 
@@ -31,7 +31,7 @@ This information is further to the [Megasquirt How-To][Wiki: megasquirt] and [Ed
 > Here's my basic system as I sent to Swerve
 
 > TBI of Falcon EA (4L straight 6)
-> Megasquirt ecu and relay box (Google megasquirt)
+> Megasquirt ecu and relay box (see [MegaSquirt.info](https://megasquirt.info/))
 > LC-1 wideband oxygen controller (wideband O2 is essential for tuning)
 > Existing mechanical pump feeding a surge tank which in turn feeds a high pressure external pump to pressurise the injectors (2)
 > CLT sensor (coolant temp)

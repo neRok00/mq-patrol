@@ -1,7 +1,4 @@
 +++
-title = "Welcome"
+title = "Home"
 url = "index.html"
 +++
-
-
-WTF

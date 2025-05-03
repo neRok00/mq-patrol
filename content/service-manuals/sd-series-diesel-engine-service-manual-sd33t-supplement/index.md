@@ -1,6 +1,6 @@
 +++
 type="ServiceManual"
-title="SD Series Diesel Engine Service Manual - SD33T Supplement"
+title="SD33T Diesel Engine Service Manual Supplement"
 scope="Engine"
 url="service-manuals/sd-series-diesel-engine-service-manual-sd33t-supplement/"
 file=["sd-series-diesel-engine-service-manual-sd33t-supplement.pdf", "sd-series-diesel-engine-service-manual-sd33t-supplement.pdf", "7.8MB"]

@@ -1,6 +1,6 @@
 +++
 type="ServiceManual"
-title="MQ Service Manual Supplement (1984)"
+title="MQ Service Manual Supplement III (1984)"
 scope="Vehicle"
 url="service-manuals/mq-service-manual-supplement-1984/"
 file=["mq-service-manual-supplement-1984.zip", "mq-service-manual-supplement-1984.zip", "1.0MB"]

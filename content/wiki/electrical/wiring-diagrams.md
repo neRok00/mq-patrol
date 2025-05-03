@@ -1,6 +1,6 @@
 +++
 title = "Wiring Diagrams"
-date = "2016-12-26T01:01:01+08:00"
+date = "2016-12-26"
 tags = ["Electrical"]
 +++
 

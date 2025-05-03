@@ -1,6 +1,6 @@
 +++
 title = "Front Diff Rebuild - Stage 3 (CV)"
-date = "2016-08-01T01:01:01+08:00"
+date = "2016-08-01"
 tags = ["Differential"]
 +++
 

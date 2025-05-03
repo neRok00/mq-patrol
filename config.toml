@@ -17,7 +17,7 @@ publishDir = ".gh-pages/"
     
 [[menu.main]]
     name = "Wiki"
-    weight = 2
+    weight = 4
     url = "/wiki/"
     
 [[menu.main]]

@@ -1,6 +1,6 @@
 +++
 title = "Unusual Body Types / Shapes"
-date = "2017-12-30T01:01:01+08:00"
+date = "2017-12-30"
 tags = ["Body"]
 +++
 
