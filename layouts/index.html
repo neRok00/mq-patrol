@@ -25,22 +25,55 @@
                     <h2>Wiki Guides</h2>
                     <p class="panel-body">A collection of articles and guides gathered from fellow MQ enthusiasts.</p>
                 </a>
-                <a href="/wiki/other/faq/" class="thumbnail col-xs-12 col-md-4">
+                <a href="/search/" class="thumbnail col-xs-12 col-md-4">
                     <h2>Search Tool</h2>
                     <p class="panel-body">
-                        On this page you can search through all of the wiki's content, to find what you want quicker!<br><br>
-                        <strong class="alert alert-success well-sm">Works offline!</strong>
+                        On this page you can search through all of the Wiki content to find what you want.<br><br>
+                        <strong class="alert alert-info well-sm">Works offline!</strong>
                     </p>
                 </a>
+            </div>
+        </div>
+
+        <div style="align-self: stretch; margin: 4vmin -15px 0;">
+            <div class="col-xs-12 col-md-8 col-md-push-2">
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Website has reached End-Of-Life — May 2025</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p>
+                            <div class="panel-title">
+                                <a href="http://www.patrol4x4.com/forum/members/nerok-3286/">@neRok</a> here! :D
+                            </div>
+                            <br>
+                            It was about 15 years ago when I started up an MQ wiki, <span>originally at <a href="https://web.archive.org/web/20101106124804/http://nerok.info/">neRok.info</a>.</span>
+                            <br>
+                            It's also been nearly 10 years since I owned an MQ. <span>So now seems a good time to let this site go offline.</span>
+                        </p>
+                        <p>
+                            Not all is lost though. Most pages should be archived on the <span><a href="https://web.archive.org/web/2/https://mq-patrol.com/">Wayback Machine</a>.</span>
+                            <br>
+                            And all of the sites code and content is available at <span><a href="https://github.com/neRok00/mq-patrol">github.com/neRok00/mq-patrol</a>.</span>
+                        </p>
+                        <p style="text-wrap: balance;">And to give it a proper send-off, I spruced up this home-page and created some new pages featuring a bunch of pics found on my HDD.</p>
+                        <a class="btn btn-success" href="/search/?query=2025&source=3">
+                            <span class="bg-success badge"><span class="text-success">
+                                Find them all at this link <i aria-hidden="true" class="glyphicon glyphicon-new-window"></i>
+                            </span></span>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
 
     </main>
     
     <style>
-        .container {padding: 0 1vmin;}
         main {display: flex; flex-flow: column nowrap; align-items: center; text-align: center;}
-        @font-face {font-family: "Rubik"; src: url("/fonts/Rubik-Bold.ttf") format("truetype"); }
+        @font-face {font-family: "Rubik"; src: url("/fonts/Rubik-Bold.ttf") format("truetype");}
+        .panel-body span {display: inline-block; break-inside: avoid;}
+        a.btn-success {text-transform: uppercase; font-weight: bold; letter-spacing: 1px;}
         h1 {
             font-family: "Rubik", Impact, sans-serif;
             color: #333;
@@ -57,7 +90,7 @@
             content: "";
             position: absolute;
             height: 0;
-            width: 100%;
+            width: 99.9%;
             top: 50%;
             left: 0;
             z-index: -1;
@@ -72,7 +105,7 @@
             width: 100%;
             & span:last-of-type {direction: rtl;}
             & i[class*="road"] {padding: 0 2vmin; vertical-align: bottom;}
-            & i:not([class*="road"]) {font-size: 36%; width: 36px; top: -6px; color: #888;}
+            & i:not([class*="road"]) {font-size: 36%; width: 36px; top: -2px; vertical-align: middle; color: #888;}
         }
         div.card_grid {
             display: grid;
